@@ -1,44 +1,44 @@
-## malaria-monitor
+# malaria-monitor
 
 TODO:...Ipsum Loren...
 
-# Team XYZ Roster
+### Team XYZ Roster
 
-Fatma, Dev Team Member
-Vikram, Dev Team Member
-Derek, Dev Team Member & Project Owner
-Karen, Dev Team Member & Scrum Master
+- Fatma, Dev Team Member
+- Vikram, Dev Team Member
+- Derek, Dev Team Member & Project Owner
+- Karen, Dev Team Member & Scrum Master
 
-# Product ABC
+## Product ABC
 
 TODO:...Ipsum Loren...
 
-# Product Vision
+### Product Vision
 
 TODO:...
 
-# Vision of the First Iteration
-
-TODO:...
-
-# Product Stakeholders
-
-TODO:...
-
-# Product Persona
+### Vision of the First Iteration
 
 TODO:...
 
 
-# Product Backlog Link
+### Product Stakeholders
+
+TODO:...
+
+### Product Persona
+
+TODO:...
+
+## Product Backlog Link
 
 TODO:.. link to Trello, or google docs, PBIs
 
-# Product Backlog Order Rational
+### Product Backlog Order Rational
 
 TODO:.. add it here...
 
-# Definition of Ready
+## Definition of Ready
 
 A Product Backlog Item (PBI) is ready when it:
 
@@ -49,7 +49,7 @@ A Product Backlog Item (PBI) is ready when it:
 * ...
 TODO:.. add more here...
 
-# Relative Size Estimates
+### Relative Size Estimates
 
 Reltive size estimates of story board points was done by [Planniing Poker | Infinity Grouping]
 
