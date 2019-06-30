@@ -10,20 +10,20 @@
 
 ## Product "Imported Malaria Monitor"
 
-__Far Product Vision:__ Control and emlimiate malaria globally.
+__Far Vision:__ Control and eliminate malaria globally.
 
-__Near First Iteration Vision:__ Prevent malaria outbreaks by enabling informed programatic actions on the ground.
+__Near Vision:__ Prevent malaria outbreaks by enabling informed programmatic actions on the ground.
 
 ## Product Stakeholders & Personas
 
-TODO: link in personas (jpeg of Xtensio?)
+Real person Stakeholder (Researcher): Marcia Castro, PhD
 
-- Marcia Castro, PhD: Malaria Control Program [link in Marcia persona]
+![Researcher persona](personas/persona-nonFictional-Researcher.png "Researcher persona")
 
-- Marcelo Urbano Ferreira, MD, PhD: Malaria Control Program Manager [link program manager personal]
+![Global Health Director persona](personas/persona-semiFictional-GlobalHealthOrganizationDirector.png "Global Health Director persona")
 
-- Pedro L. Alonso, MD, PhD: World Health Organization Director [link in WHO Director persona]
 
+![Control Manager persona](personas/personal-semiFictional-RegionalMalariaControlProgramManager.png "Control Manager persona")
 
 ## Product Backlog
 
@@ -31,14 +31,14 @@ Trello PBI Board: ["Imported Malaria Monitor" Product Backlog](https://trello.co
 
 ### Product Backlog Order Rational
 
-TODO:.. add PBI ordering rational....
+The product backlog is orded based on a MVP (Minimal Viable Product) criteria and the feature priorities state by the stakeholder.
 
 ## Definition of Ready
 
 A Product Backlog Item (PBI) is "ready" for a consideration in a sprint when:
 
 * It has a title
-* It has a User Story openning sentence
+* It has a User Story opening sentence
 * It has an estimate in story points
 * Its user story identifies its business value
 * Its acceptance criteria are clear and testable
@@ -51,7 +51,7 @@ A Product Backlog Item (PBI) is "ready" for a consideration in a sprint when:
 
 ### Relative Size Estimates
 
-Reltive size estimates of story board points was done by [Planning Poker | Infinity Grouping]
+Relative size estimates of story board points was done by Planning Poker. It was facilitated by the web tool https://play.planningpoker.com
 
 Only developmental team members participated in creatinig the estimates.
 
@@ -67,4 +67,3 @@ Only developmental team members participated in creatinig the estimates.
 - Code is committed
 - No technical debt
 - Stakeholders agree that it's done
-
