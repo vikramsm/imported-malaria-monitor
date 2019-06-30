@@ -27,7 +27,7 @@ TODO: link in personas (jpeg of Xtensio?)
 
 ## Product Backlog
 
-Trello: [Imported Malaria Monitor Product Backlog] (https://trello.com/b/2R8EOqim/imported-malaria-monitor "Imported Malaria Monitor Product Backlog")
+Trello PBI Board: ["Imported Malaria Monitor" Product Backlog](https://trello.com/b/2R8EOqim/imported-malaria-monitor "Imported Malaria Monitor Product Backlog")
 
 ### Product Backlog Order Rational
 
