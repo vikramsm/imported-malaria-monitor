@@ -1,4 +1,4 @@
-# malaria-monitors
+# imported-malaria-monitor
 
 ## Team "Malaria Monitors"
 
