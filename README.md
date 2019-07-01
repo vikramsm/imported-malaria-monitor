@@ -31,7 +31,7 @@ Trello PBI Board: ["Imported Malaria Monitor" Product Backlog](https://trello.co
 
 ### Product Backlog Order Rational
 
-The product backlog is orded based on a MVP (Minimal Viable Product) criteria and the feature priorities state by the stakeholder.
+The product backlog is ordered based on a MVP (Minimal Viable Product) criteria and the feature priorities state by the stakeholder.
 
 ## Definition of Ready
 
@@ -53,7 +53,7 @@ A Product Backlog Item (PBI) is "ready" for a consideration in a sprint when:
 
 Relative size estimates of story board points was done by Planning Poker. It was facilitated by the web tool https://play.planningpoker.com
 
-Only developmental team members participated in creatinig the estimates.
+Only developmental team members participated in creating the estimates.
 
 ## Definition of Done
 - There are unit tests
