@@ -1,0 +1,10 @@
+* Imported Malaria Monitor
+** Project Setup
+   - Install python3
+   - Install pycharm
+   - Create Virtual environment: 
+     - python3 -m venv venv
+     - source venv/bin/activate
+     - pip install Django
+   - django-admin startproject IMM .
+   - django-admin startapp demo
