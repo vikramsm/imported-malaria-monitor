@@ -1,10 +1,23 @@
 * Imported Malaria Monitor
-** Project Setup
-   - Install python3
-   - Install pycharm
-   - Create Virtual environment: 
-     - python3 -m venv venv
-     - source venv/bin/activate
-     - pip install Django
-   - django-admin startproject IMM .
-   - django-admin startapp demo
+
+** Project Setup (https://www.django-rest-framework.org/tutorial/quickstart/)
+*** Django
+    - Install python3
+    - Install pycharm
+    - Create Virtual environment: 
+      - python3 -m venv venv
+      - source venv/bin/activate
+      - pip install Django
+    - django-admin startproject IMM .
+    - django-admin startapp demo
+    - Under settings.py add app to installed APPS section
+    - python manage.py migrate - Updates database
+    - python manage.py makemigrations - to create migrations
+    - python3 manage.py createsuperuser
+*** Angular (https://angular.io/start)
+    - Install node.js
+      - "node --version" to make sure installed correctly
+    - "npm install -g @angular/cli" to install angular cli
+    - "ng --version" to check angular installed correctly
+    - "ng new angular-demo" to create new angular app
+
