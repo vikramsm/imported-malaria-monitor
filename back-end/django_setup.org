@@ -1,0 +1,18 @@
+* Django Setup (https://www.django-rest-framework.org/tutorial/quickstart/)
+** Install Dependencies
+   - Install python3
+   - Install pycharm
+   - pip install Django
+   - pip install Djangorestframework
+** Create Virtual Environment
+   - "python3 -m venv venv" to create virtual environment
+   - "source venv/bin/activate" to activate virtual environment
+** Create Django Proejct
+   - "django-admin startproject IMM ."
+** Create Django App
+   - "django-admin startapp demo"
+   - Under settings.py add app to installed APPS section
+* Django devel commands
+   - "python manage.py migrate" - Updates database
+   - "python manage.py makemigrations" - to create migrations
+   - "python3 manage.py createsuperuser" - to create superuser (admin back-end)
