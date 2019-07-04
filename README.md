@@ -75,6 +75,7 @@ Our initial velocity forecast is of 8 Story Points per Sprint. Our forecast is p
 
 ### Sprint Backlog 
 This is the link to the Sprint Backlog and Tasks can be found here: https://trello.com/b/2R8EOqim/imported-malaria-monitor
+We refined the stories that are larger than half of our velocity. The current board reflects the newest state of the stories and tasks after refinement.
 
 ### What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal? Annotate your team's response so it's clear which team members did which activities.
 #### Karen
