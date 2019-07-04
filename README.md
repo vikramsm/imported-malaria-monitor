@@ -68,10 +68,10 @@ Only developmental team members participated in creating the estimates.
 - No technical debt
 - Stakeholders agree that it's done
 
-## SPRINT 1
+## SPRINT 1 (Due July 4th, 3 pm)
 
 ### Forecast Velocity
-Our initial velocity forecast is of 7 Story Points per Sprint. Our forecast is primarily based on the limited time we have (considering the holiday, too) and choosing the right tools to initialize the project. As we progress, we expect to increase the velocity.
+Our initial velocity forecast is of 7 Story Points per Sprint. Our forecast is primarily based on setting up the infrastructure and choosing the right tools for backend and frontend development since this is our first sprint. We also had limited time (considering the week days and holiday, too) for this Sprint. As we progress, we expect to increase the velocity. 
 
 ### Sprint Backlog
 
