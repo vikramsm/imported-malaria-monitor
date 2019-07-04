@@ -127,9 +127,13 @@ We had many meetings and there were a lot of back and forth discussions which so
 ### Sprint 1 Burndown
 ![Sprint 1 Burndown Chart](img/sprint1_burndown_chart.png "Sprint 1 Burndown")
 
-### Sprint 1 Mob Programming
+### Sprint 1 Mob Programming & Pair Programming
 ![Mob Programming](img/mob_programming.JPG "Mob Programming")
 Vikram receives gold star for effort!
+
+- Mob programming on front end development.
+- Vikram & Derek paired programmed on Wednesday after class.
+
 
 ### Sprint 1 Daily Scrums
 We performed daily scrums to inform each other where we were in progress towards the sprint goal, and to refocus efforts, and to resolve impediments as a team. We had videoconference on Monday and met after class on Tuesday and Wednesday. 
