@@ -113,4 +113,4 @@ This is the link to the Sprint Backlog and Tasks can be found here: https://trel
 
 ### Sprint 1 Mob Programming
 ![Mob Programming](img/mob_programming.JPG "Mob Programming")
-Vikram deserves 100 extra pts for the active engagement!
+Vikram receives gold star for effort!
