@@ -73,7 +73,8 @@ Only developmental team members participated in creating the estimates.
 ### Forecast Velocity
 Our initial velocity forecast is of 7 Story Points per Sprint. Our forecast is primarily based on setting up the infrastructure and choosing the right tools for backend and frontend development since this is our first sprint. We also had limited time (considering the week days and holiday, too) for this Sprint. As we progress, we expect to increase the velocity. 
 
-### Sprint Backlog
+### Sprint Backlog 
+This is the link to the Sprint Backlog and Tasks can be found here: https://trello.com/b/2R8EOqim/imported-malaria-monitor
 
 #### Online malaria database (E1)
 User Story: 
