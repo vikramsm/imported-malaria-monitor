@@ -118,9 +118,9 @@ We refined the stories that are larger than half of our velocity. The current bo
 ### Impediments we had and how we removed them
 - We had to further decompose the original story because we realized some of the tasks are actually stories on its own. We removed the impediment by refining the stories.
 
-- Having a holiday as the last day of our Sprint was another impediment because it was hard to contact our stakeholder and arrange a meeting with the team. We overcame this impediment by having a video conference meeting with the development team (also has P.O. and S.M.), and our stakeholder.
+- Having a holiday as the last day of our Sprint was another impediment because it was hard to contact our stakeholder and arrange a meeting with the team. We overcame this impediment by having a video conference meeting with the development team (also has P.O. and S.M.), and our stakeholder met with P.O.
 
-- Having this as our first Spring brought some difficulties such as choosing the right tools to maximize the productivity of our team considering team member's strengths and skills. 
+- Having this as our first Sprint brought some difficulties such as choosing the right tools to maximize the productivity of our team considering team member's strengths and skills. 
   Being a newly formed team and not knowing each other's technical skills resulted in longer discussions on who should do what. 
 We had many meetings and there were a lot of back and forth discussions which solved the issue.
 
