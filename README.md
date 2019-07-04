@@ -140,3 +140,18 @@ Acceptance Criteria:
 - Researched backend (Django) and frontend (angular) functionalities 
 - Setup backend and frontend
 - Researched how to integrate front-end and backend
+
+### What will you do in the next 24 hours to help the Development Team meet the Sprint Goal? Annotate your team's response so it's clear which team members plan to do which activities.
+
+#### Karen
+- Finish incorporating maps into frontend
+- Implement frontend API to request message from backend
+#### Vikram
+- Finalize backend functionality
+- Implement backend API to respond to frontend requests
+#### Fatma
+- Write tests
+- Document project
+#### Derek
+- Arrange meeting with Stakeholder
+- Document project
