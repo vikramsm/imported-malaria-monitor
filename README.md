@@ -67,3 +67,60 @@ Only developmental team members participated in creating the estimates.
 - Code is committed
 - No technical debt
 - Stakeholders agree that it's done
+
+## SPRINT 1
+
+### Forecast Velocity
+Our initial velocity forecast is of 7 Story Points per Sprint. Our forecast is primarily based on the limited time we have (considering the holiday, too) and choosing the right tools to initialize the project. As we progress, we expect to increase the velocity.
+
+### Sprint Backlog
+
+#### Online malaria database (E1)
+User Story: 
+As a malaria researcher, I want an online database to record cases of malaria.
+
+Additional Details:
+- Researchers and healthcare institutions currently have no standard way of storing and accessing malaria infection cases
+
+Acceptance Criteria:
+- An online database exists
+- The online database is capable of storing malaria infection records
+
+#### Authentication-enabled malaria patient records (E2)
+User Story: 
+As a malaria control program manager, I want a secure way of recording malaria infection cases that include patient data.
+
+Additional Details:
+- The access to malaria infections is hard in most cases because the healthcare institutions have no way of sharing the data easily with organization or researchers
+- The malaria infection cases include patient information which is categorized as PII (Personal Identifiable Information). Therefore, the information is sensitive in nature and cannot be publicly available.
+
+Acceptance Criteria:
+- An online database exists
+- The database is only accessible by means of a secure login interface, so only authorized users with accounts can access the information
+
+#### Map of Brazil with counties boundaries (E2)
+User Story: 
+As a researcher, I want a map showing Brazil all Brazilian counties as defined by the IBGE institution to assist in my research of malaria diagnosed locations.
+
+Additional Details:
+- The IBGE is a governmental institution that divides the Brazilian territories into counties (districts).
+- Malaria cases are recorded by county because of the healthcare system infrastructure and because it provides enough granularity to address and control disease outbreaks.
+
+Acceptance Criteria:
+- The usual Definition of Done
+- The map displays in a window
+- The map supports zoom in/out functionality
+- The map displays the names of each county
+
+#### Browser accessible malaria monitoring application for 0 cases (E2)
+User Story: 
+As a malaria control program manager, I want an application to see zero cases of malaria in Brazil.
+
+Additional Details:
+- Currently, there is no convenient way to track malaria cases in Brazil.
+- Program managers seek a way to visualize malaria cases in the country through a simple web application that could be accessed through a web-browser
+
+Acceptance Criteria:
+- The usual Definition of Done
+- A web-capable application exists that can be accessed through a web-browser
+- The web application displays a map of Brazil showing 0 cases of malaria
