@@ -124,3 +124,19 @@ Acceptance Criteria:
 - The usual Definition of Done
 - A web-capable application exists that can be accessed through a web-browser
 - The web application displays a map of Brazil showing 0 cases of malaria
+
+### What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal? Annotate your team's response so it's clear which team members did which activities.
+#### Karen
+- Researched map components for web app
+- Worked on frontend project using angular framework to incorporate map to app
+#### Vikram
+- Created backend of website 
+- Implemented login functionality
+#### Fatma
+- Documented project
+- Reviewed sprint backlog and formulated user stories
+- Decomposed sprint item into tasks
+#### Derek
+- Researched backend (Django) and frontend (angular) functionalities 
+- Setup backend and frontend
+- Researched how to integrate front-end and backend
