@@ -108,6 +108,7 @@ This is the link to the Sprint Backlog and Tasks can be found here: https://trel
 
 #### Fatma
 - Document project
+- Research CI/CD tools (Jenkins) for the next Sprint
 
 #### Derek
 - Arrange meeting with Stakeholder
