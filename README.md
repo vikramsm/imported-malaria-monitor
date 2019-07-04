@@ -156,3 +156,7 @@ Acceptance Criteria:
 #### Derek
 - Arrange meeting with Stakeholder
 - Document project
+
+
+### Sprint 1 Burndown
+![Sprint 1 Burndown Chart](img/sprint1_burndown_chart.png "Sprint 1 Burndown")
