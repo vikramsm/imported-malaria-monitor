@@ -162,3 +162,7 @@ Acceptance Criteria:
 ![Sprint 1 Burndown Chart](img/sprint1_burndown_chart.png "Sprint 1 Burndown")
 
 #### Trello Board Link: https://trello.com/b/2R8EOqim/imported-malaria-monitor
+
+### Sprint 1 Mob Programming
+![Mob Programming](img/mob_programming.JPG "Mob Programming")
+Vikram deserves 100 extra pts for the active engagement!
