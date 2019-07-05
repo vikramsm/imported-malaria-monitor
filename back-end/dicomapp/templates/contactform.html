@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+
+{% block title %}contactform{% endblock %}
+{
+{% block content %}
+<div class=' text-center p-5 ' style="color:black">
+        <h2 class=' .text-secondary'>Contact Us:</h2>
+        <p style="text-align:left">
+		<b>Head Office :</b><br>
+		MalariaMonitor Group<br>
+		Harvard T.H. Chan School of Public Health <br>
+		Boston, MA 02115
+		<br>
+		<br>
+		Phone: Tel: 617-432-5321<br>
+		
+		Email: <br>
+		<br>
+		<br>
+		If you are interested in knowing more about the MalariaMonitor webapp and how it can revloutionize your malaria eradicaton program, 
+		please call us or email us and our representative will schedule a meeting with you at the earliest
+		to discuss your requirements!</p> 
+		
+</div>
+
+{% for field in form %}
+    <div class="row">
+       <div class="col-md-2">    
+        {{ field.label_tag }}
+        {% if field.help_text %}
+          <sup>{{ field.help_text }}</sup>
+        {% endif %}
+        {{ field.errors }}
+       </div><div class="col-md-10 pull-left">
+         {{ field }}
+       </div>
+    </div>
+ {% endfor %}
+ 
+ {% endblock %}

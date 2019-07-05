@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+	{% load static %}
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+	
+		
+	<style>
+		.footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: auto;
+		background-color:black;
+		color: white;
+		text-align: center;
+		}
+	</style> 	
+		
+</head>
+	
+	<!--<body class="bg-secondary">-->
+	<body bgcolor="#E6E6FA">
+	
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand"  href="{% url 'index' %}"><p style="color:#FFC300; font-weight: 900;">MalariaMonitor</p></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About Us</a>
+		</li>
+		
+		<li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}">Contact Form</a>
+		</li>
+		
+		<li class="nav-item">
+        <a class="nav-link" href="{% url 'directions' %}">Directions</a>
+		</li>
+		
+		<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Disease Mapping & Analytics
+        </a>
+       
+		
+		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'map' %}">View Disease Export Maps</a>
+		  
+          <a class="dropdown-item" href="">View Disease Import Maps</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="">View Localized Disease Maps </a>
+        </div>
+		
+		</li>
+		
+		
+		{% if user.is_authenticated %}		
+			
+		<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          District Records
+        </a>
+		
+		  
+		  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="">Register New District</a>
+		   <a class="dropdown-item" href="">District Health Records</a>
+          <a class="dropdown-item" href="">District List</a>
+          <div class="dropdown-divider"></div>
+          
+        </div>
+		</li>
+		
+		
+		
+		<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Disease Mapping & Analytics
+        </a>
+       
+		
+		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="">View Disease Export Maps</a>
+		  
+          <a class="dropdown-item" href="">View Disease Import Maps</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="">View Localized Disease Maps </a>
+        </div>
+		
+		</li>
+		
+		<li class="nav-item">
+		<a class="nav-link" href="{% url 'logout' %}">logout</a>
+		</li>
+		
+		<li class="nav-item">
+		<a class="nav-link" style="color:red;">Hi {{ user.username }}!  </p>	 
+		</li>
+		{% else %}
+		
+		<li class="nav-item">
+		<!--<a class="nav-link" href="{% url 'login' %}">login</a>-->
+		<a class="nav-link" href="">login</a>
+		</li>
+		{% endif %}
+		</ul>
+   
+	</div>
+	</nav>
+	
+	<main>
+	<div class="container container-fluid">
+	
+	{% block content %}
+       
+    {% endblock %}
+	 
+	</div>
+	
+	</main>
+	
+		
+	<div class="footer">
+	<p>CSCIS-71 Agile Software Development - Team Malaria Monitor&copy; Summer 2019</p>
+	</div>
+	
+	
+	</body>
+</html>
