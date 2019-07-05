@@ -1,0 +1,22 @@
+{% load render_bundle from webpack_loader %}
+
+<html  lang="en">
+<head>
+<meta  charset="UTF-8">
+<base  href="/">
+<title>Imported Malaria Monitor</title>
+<link rel="stylesheet" href="static/leaflet.css" />
+</head>
+<body>
+
+<app-root></app-root>
+
+{% render_bundle 'polyfills' %}
+{% render_bundle 'styles' %}
+{% render_bundle 'main' %}
+{% render_bundle 'runtime' %}
+{% render_bundle 'vendor' %}
+
+</body>
+</html>
+

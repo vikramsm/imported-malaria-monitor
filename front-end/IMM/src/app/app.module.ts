@@ -7,13 +7,13 @@ import { MapComponent } from './map/map.component';
 import { BackendService } from './backend/backend.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MapComponent
-  ],
   imports: [
     BrowserModule,
     HttpClientModule
+  ],
+  declarations: [
+    AppComponent,
+    MapComponent
   ],
   providers: [BackendService],
   bootstrap: [AppComponent],

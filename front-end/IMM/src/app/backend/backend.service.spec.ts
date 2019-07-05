@@ -1,50 +1,21 @@
-import { TestBed, async, inject } from '@angular/core/testing';
-import { MockBackend } from '@angular/http/testing';
-import { BackendService } from './backend.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import {
-  HttpModule,
-  Http,
-  Response,
-  ResponseOptions
-} from '@angular/http';
-
-let httpClientSpy: { get: jasmine.Spy };
-let backendService: BackendService;
+import { TestBed } from '@angular/core/testing';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { BackendService } from './backend.service';
 
 describe('BackendService', () => {
+  let backendService: BackendService;
+  let httpTestingController: HttpTestingController;
+
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [{ provide: HttpClientTestingModule, useClass: MockBackend }]
+      imports: [ HttpClientTestingModule ]
     });
     backendService = TestBed.get(BackendService);
   });
-
-  it('should be created', () => {
-    const service: BackendService = TestBed.get(BackendService);
-    expect(service).toBeTruthy();
+  it('should create the backend service', () => {
+    expect(backendService).toBeTruthy();
   });
-
-  it('should through 404 not found', () => {
-    const service: BackendService = TestBed.get(BackendService);
-    expect(service).toBeTruthy();
-  });
-
-  //it('should return backup data', () => {
-  it('should return GeoJSON', async(
-    inject([BackendService, HttpClientTestingModule], (backendService, mockBackend) => {
-      mockBackend.connections.subscribe((connection) => {
-        connection.mockRespond(new Response(new ResponseOptions({
-          body: JSON.stringify(mockGeoJsonData)
-        })));
-      });
-      backendService.getGeoJson().subscribe((data) => {
-        expect(data.length).toBe(3);
-        expect(data[0].name).toEqual('Video 0');
-      });
-    }))
-  );
 });
 
 const mockMalariaData = {
