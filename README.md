@@ -126,6 +126,25 @@ Vikram receives gold star for effort!
 - Mob programming on front end development.
 - Vikram & Derek paired programmed on Wednesday after class.
 
+### Sprint 1 TDD
+
+The Imported Malaria Monitor is composed of two sub-projects. The back end, Django, and the front end, Angular.io. This repository contains these projects under sub directories front-end and back-end.
+
+#### Front-End UI
+
+The "front-end" angular.io UI has 3 components, the landing "app", the "map" of country counties, the "backend" service to retrieve map and malaria data from the backend server. The test represent instantiating the pages and retrieving content for display. The challenge with TDD on the front end was the learning curve with mocking angular.io Observables (via AngularJs v6).
+
+![Sprint 1 TDD](img/unitTestsFrontEndSideJul4.png "Sprint 1 TDD")
+
+#### Back-End Server
+
+Not integrated to the main branch.
+
+### Sprint 1 Evidence of Running Program
+
+The front-end angular.io component demonstrating the counties of Brazil with 0 cases of Malaria.
+
+![Sprint 1 Running Code](img/IMM-s1-front-end.png "Sprint 1 running front-end")
 
 ### Sprint 1 Daily Scrums
 We performed daily scrums to inform each other where we were in progress towards the sprint goal, and to refocus efforts, and to resolve impediments as a team. We had videoconference on Monday and met after class on Tuesday and Wednesday. 
