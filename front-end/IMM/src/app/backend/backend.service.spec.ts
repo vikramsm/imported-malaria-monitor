@@ -26,7 +26,7 @@ describe('BackendService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should through 404 not found', () => {
+  it('should ...', () => {
     const service: BackendService = TestBed.get(BackendService);
     expect(service).toBeTruthy();
   });
@@ -42,6 +42,7 @@ describe('BackendService', () => {
       backendService.getGeoJson().subscribe((data) => {
         expect(data.length).toBe(3);
         expect(data[0].name).toEqual('Video 0');
+
       });
     }))
   );
