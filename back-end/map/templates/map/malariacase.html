@@ -10,6 +10,13 @@
             <li> Municipality of Residence: {{ case.munResi }} </li>
             <li> Municipality of Infection: {{ case.munInfe }} </li>
         </ul>
+        <h2>Patients</h2>
+        <ul>
+            {% for patient in patients %}
+            <li>{{ patient }}</li>
+            {% empty %}
+            <li> Patient details not recorded </li>
+            {% endfor %}
         <a href="{% url 'index' %}">Back to full listing</a>
     </body>
 </html>

@@ -19,3 +19,11 @@ class MalariaCase(models.Model):
 
     def __str__(self):
         return f"{self.id} - MUN_NOTI: {self.munNoti}, MUN_RESI: {self.munResi}, MUN_INFE: {self.munInfe}"
+
+class Patient(models.Model):
+    first = models.CharField(max_length=64)
+    last = models.CharField(max_length=64)
+    cases = models.ManyToManyField(MalariaCase, blank=True, related_name="patients")
+
+    def __str__(self):
+        return f"{self.first} {self.last}"

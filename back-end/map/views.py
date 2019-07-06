@@ -16,6 +16,7 @@ def malariacase(request, case_id):
     except MalariaCase.DoesNotExist:
         raise Http404("Case does not exist.")
     context = {
-        "case": case
+        "case": case,
+        "patients": case.patients.all()
     }
     return render (request, "map/malariacase.html", context)
