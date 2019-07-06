@@ -1,13 +1,7 @@
 import { TestBed, async, inject } from '@angular/core/testing';
-import { MockBackend } from '@angular/http/testing';
-import { BackendService } from './backend.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import {
-  HttpModule,
-  Http,
-  Response,
-  ResponseOptions
-} from '@angular/http';
+import { BackendService } from './backend.service';
 
 let httpClientSpy: { get: jasmine.Spy };
 let backendService: BackendService;
@@ -15,37 +9,40 @@ let backendService: BackendService;
 describe('BackendService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [{ provide: HttpClientTestingModule, useClass: MockBackend }]
+      imports: [
+        HttpClientModule,
+        HttpClientTestingModule
+      ]
     });
-    backendService = TestBed.get(BackendService);
   });
 
-  it('should be created', () => {
-    const service: BackendService = TestBed.get(BackendService);
-    expect(service).toBeTruthy();
-  });
+  it(`should respond with fake data`, async(inject([HttpClient, HttpTestingController],
+    (http: HttpClient, backend: HttpTestingController) => {
+      http.get('/foo/bar').subscribe((next) => {
+        expect(next).toEqual({ baz: '123' });
+      });
+
+      backend.match({
+        url: '/foo/bar',
+        method: 'GET'
+      })[0].flush({ baz: '123' });
+  })));
+
+   it(`should issue a request`, async(
+        inject([HttpClient, HttpTestingController], (http: HttpClient, backend: HttpTestingController) => {
+          http.get('/foo/bar/baz').subscribe();
+          backend.expectOne({
+            url: '/foo/bar/baz',
+            method: 'GET'
+          });
+        })
+      )
+    );
 
   it('should ...', () => {
     const service: BackendService = TestBed.get(BackendService);
     expect(service).toBeTruthy();
   });
-
-  //it('should return backup data', () => {
-  it('should return GeoJSON', async(
-    inject([BackendService, HttpClientTestingModule], (backendService, mockBackend) => {
-      mockBackend.connections.subscribe((connection) => {
-        connection.mockRespond(new Response(new ResponseOptions({
-          body: JSON.stringify(mockGeoJsonData)
-        })));
-      });
-      backendService.getGeoJson().subscribe((data) => {
-        expect(data.length).toBe(3);
-        expect(data[0].name).toEqual('Video 0');
-
-      });
-    }))
-  );
 });
 
 const mockMalariaData = {

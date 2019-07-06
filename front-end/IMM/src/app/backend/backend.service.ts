@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class BackendService {
   constructor(private http: HttpClient) {}
   backendUrl = 'localhost:8080/geojson/brazil';
-  geoJsonJUrl = '../../assets/BRA_adm3.json';
+  geoJsonJUrl = 'assets/BRA_adm3_NorthWest.json';
   getGeoJson() {
      return this.http.get(this.backendUrl);
   }
