@@ -1,12 +1,103 @@
-{% extends 'base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>d3 Integration</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v5.3.0/css/ol.css" type="text/css">
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://unpkg.com/d3@4.12.0/build/d3.js"></script>
+    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.js"></script>
+  </head>
+  <body>
+    <div id="map" class="map"></div>
+    <script>
+      import Map from 'ol/Map.js';
+      import View from 'ol/View.js';
+      import {getWidth, getCenter} from 'ol/extent.js';
+      import {Image as ImageLayer, Tile as TileLayer} from 'ol/layer.js';
+      import {fromLonLat, toLonLat} from 'ol/proj.js';
+      import {ImageCanvas as ImageCanvasSource, Stamen} from 'ol/source.js';
 
 
+      var map = new Map({
+        layers: [
+          new TileLayer({
+            source: new Stamen({
+              layer: 'watercolor'
+            })
+          })
+        ],
+        target: 'map',
+        view: new View({
+          center: fromLonLat([-97, 38]),
+          zoom: 4
+        })
+      });
 
-{% block title %}Home{% endblock %}
 
-{% block content %}
-<body class="bg" style="background-image: url('{% static 'global_malaria.gif' %}')";>
-	
-{% endblock %}
+      /**
+       * Load the topojson data and create an ol/layer/Image for that data.
+       */
+      d3.json('data/topojson/us.json', function(error, us) {
+        var features = topojson.feature(us, us.objects.counties);
 
+        /**
+         * This function uses d3 to render the topojson features to a canvas.
+         * @param {module:ol/extent~Extent} extent Extent.
+         * @param {number} resolution Resolution.
+         * @param {number} pixelRatio Pixel ratio.
+         * @param {module:ol/size~Size} size Size.
+         * @param {module:ol/proj/Projection~Projection} projection Projection.
+         * @return {HTMLCanvasElement} A canvas element.
+         */
+        var canvasFunction = function(extent, resolution, pixelRatio, size, projection) {
+          var canvasWidth = size[0];
+          var canvasHeight = size[1];
+
+          var canvas = d3.select(document.createElement('canvas'));
+          canvas.attr('width', canvasWidth).attr('height', canvasHeight);
+
+          var context = canvas.node().getContext('2d');
+
+          var d3Projection = d3.geoMercator().scale(1).translate([0, 0]);
+          var d3Path = d3.geoPath().projection(d3Projection);
+
+          var pixelBounds = d3Path.bounds(features);
+          var pixelBoundsWidth = pixelBounds[1][0] - pixelBounds[0][0];
+          var pixelBoundsHeight = pixelBounds[1][1] - pixelBounds[0][1];
+
+          var geoBounds = d3.geoBounds(features);
+          var geoBoundsLeftBottom = fromLonLat(geoBounds[0], projection);
+          var geoBoundsRightTop = fromLonLat(geoBounds[1], projection);
+          var geoBoundsWidth = geoBoundsRightTop[0] - geoBoundsLeftBottom[0];
+          if (geoBoundsWidth < 0) {
+            geoBoundsWidth += getWidth(projection.getExtent());
+          }
+          var geoBoundsHeight = geoBoundsRightTop[1] - geoBoundsLeftBottom[1];
+
+          var widthResolution = geoBoundsWidth / pixelBoundsWidth;
+          var heightResolution = geoBoundsHeight / pixelBoundsHeight;
+          var r = Math.max(widthResolution, heightResolution);
+          var scale = r / (resolution / pixelRatio);
+
+          var center = toLonLat(getCenter(extent), projection);
+          d3Projection.scale(scale).center(center)
+            .translate([canvasWidth / 2, canvasHeight / 2]);
+          d3Path = d3Path.projection(d3Projection).context(context);
+          d3Path(features);
+          context.stroke();
+
+          return canvas.node();
+        };
+
+        var layer = new ImageLayer({
+          source: new ImageCanvasSource({
+            canvasFunction: canvasFunction,
+            projection: 'EPSG:3857'
+          })
+        });
+        map.addLayer(layer);
+      });
+    </script>
+  </body>
+</html>
