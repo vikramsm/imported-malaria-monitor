@@ -4,4 +4,4 @@ python:
 install:
   - pip install -r back-end/requirements.txt
 script:
-  - cd back-end && python3 manage.py test
+  - cd back-end && python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py test
