@@ -18,4 +18,4 @@ class MalariaCase(models.Model):
     munInfe = models.ForeignKey(Municipality, on_delete=models.PROTECT, related_name="origin")
 
     def __str__(self):
-        return f"MUN_NOTI: {self.munNoti}, MUN_RESI: {self.munResi}, MUN_INFE: {self.munInfe}"
+        return f"{self.id} - MUN_NOTI: {self.munNoti}, MUN_RESI: {self.munResi}, MUN_INFE: {self.munInfe}"
