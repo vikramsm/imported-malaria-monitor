@@ -157,4 +157,10 @@ The following is an example from our Monday scrum.
 
 - Fatma had been working on the behavioral aspect of the sprint's user story, with knowledge of larger picture of the product backlog. Fatma had identified further areas of division in the sprint story and associated tasks. Fatma will continue refining tasks. Fatma has no impediments at this time.
 
-- Derek had communicated with Stakeholder to clarify visual aspects of the first sprint. Derek had also invested UI and back end frameworks to pool information with the team. Derek's impediment, at the time of the scrum, was finding the opportunity to retrieve sample source data from the Stakeholder. 
+- Derek had communicated with Stakeholder to clarify visual aspects of the first sprint. Derek had also invested UI and back end frameworks to pool information with the team. Derek's impediment, at the time of the scrum, was finding the opportunity to retrieve sample source data from the Stakeholder.
+
+### Sprint 1 Sprint Review
+
+The Project Owner demonstrated the Sprint 1 working software to the Stakeholder, Marcia. Marcia provided useful feedback back to the Project Owner that was added to the Product Backlog. Marcia said that the Brazil county map looks good, it was what she had in mind. But, she felt that the county map loaded too slowy and would like it to be more responsive. In addition, Marcia provided more clarification about desired UI components. For example: a dropdown selection of month being displayed, a dropdown selection of type of map, a map legend specifying color codes.
+
+![Sprint 1 Sprint Review](img/sprint1_review.jpeg "Sprint 1 Sprint Review")
