@@ -8,7 +8,7 @@
         <ul>
             {% for case in malariaCases %}
             <li>
-                {{ case }}
+                <a href="{% url 'malariacase' case.id %}"> {{ case }}</a>
             </li>
             {% endfor %}
     </body>

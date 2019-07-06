@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.shortcuts import render
 
 from .models import MalariaCase
@@ -9,3 +9,13 @@ def index(request):
         "malariaCases" : MalariaCase.objects.all()
     }
     return render(request, "map/index.html", context)
+
+def malariacase(request, case_id):
+    try:
+        case = MalariaCase.objects.get(pk=case_id)
+    except MalariaCase.DoesNotExist:
+        raise Http404("Case does not exist.")
+    context = {
+        "case": case
+    }
+    return render (request, "map/malariacase.html", context)

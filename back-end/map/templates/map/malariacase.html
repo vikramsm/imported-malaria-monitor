@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Imported Malaria Cases</title>
+    </head>
+    <body>
+        <h1>Case: {{case.id}}</h1>
+        <ul>
+            <li> Municipality Notified: {{ case.munNoti }} </li>
+            <li> Municipality of Residence: {{ case.munResi }} </li>
+            <li> Municipality of Infection: {{ case.munInfe }} </li>
+        </ul>
+        <a href="{% url 'index' %}">Back to full listing</a>
+    </body>
+</html>
