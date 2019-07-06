@@ -16,3 +16,5 @@
    - "python manage.py migrate" - Updates database
    - "python manage.py makemigrations" - to create migrations
    - "python3 manage.py createsuperuser" - to create superuser (admin back-end)
+* Django Shell
+  python3 manage.py shell
