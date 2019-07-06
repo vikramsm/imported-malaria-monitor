@@ -12,13 +12,19 @@ class Municipality(models.Model):
 class MalariaCase(models.Model):
     # Municipality where infection was first notified (diagnosed)
     munNoti = models.ForeignKey(Municipality, on_delete=models.PROTECT, related_name="target")
-    # Municipality where patient lives
+    # Municipality where patient lives. Only filled if country is Brazil (1)
     munResi = models.ForeignKey(Municipality, on_delete=models.PROTECT, related_name="residence")
     # Municipality where infection most likely originated
     munInfe = models.ForeignKey(Municipality, on_delete=models.PROTECT, related_name="origin")
+    # Country of residence
+    paisRes = models.IntegerField(default=1)
+
+    def isValid(self):
+        # Make sure municipality of residence not null when country is Brazil (1)
+        return ((self.munResi != None) and (self.paisRes == 1)) or ((self.munResi == None) and self.paisRes != 1)
 
     def __str__(self):
-        return f"{self.id} - MUN_NOTI: {self.munNoti}, MUN_RESI: {self.munResi}, MUN_INFE: {self.munInfe}"
+        return f"{self.id} - MUN_NOTI: {self.munNoti}, MUN_RESI: {self.munResi}, MUN_INFE: {self.munInfe}, PAIS_RES: {self.paisRes}"
 
 class Patient(models.Model):
     first = models.CharField(max_length=64)
