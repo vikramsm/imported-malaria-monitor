@@ -5,7 +5,7 @@ from .models import MalariaCase
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Imported Malaria Monitor")
+    return render(request, "map/index.html")
 
 def databaseIndex(request):
     context = {

@@ -8,12 +8,5 @@
     </head>
     <body>
         <h1>Imported Malaria Cases</h1>
-        <ul>
-            {% for case in malariaCases %}
-            <li>
-                <a href="{% url 'malariacase' case.id %}"> {{ case }}</a>
-            </li>
-            {% endfor %}
-        </ul>
     </body>
 </html>
