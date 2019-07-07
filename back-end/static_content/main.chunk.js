@@ -41,7 +41,7 @@ module.exports = "<h1>{{title}}</h1>\n<app-map></app-map>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Brazil By County</h2>\n<h3>Total Cases Shown: {{number_cases}}</h3>\n\n<div id=\"map\"></div>\n\n<div>{{trimmedJson}}</div>\n"
+module.exports = "<h2>Brazil By County</h2>\n<div class=\"info-section\">\n<div class=\"h3 info-item\">Total Cases Shown: {{number_cases}}</div>\n  <div class=\"month-filter-option\" class=\"info-item\">\n  <label for=\"month-filter\">Month: </label>\n   <select id=\"month-filter\" type=\"month\" name=\"month-filter\">\n     <option *ngFor = \"let i of months\">{{i}}</option>\n   </select>\n  </div>\n  <div class=\"case-filter-option\" class=\"info-item\">\n  <label for=\"case-filter\">Imported Cases: </label>\n   <select id=\"case-filter\" name=\"case-filter\">\n     <option *ngFor = \"let i of cases\">{{i}}</option>\n   </select>\n   </div>\n  <div id=\"legend\" class=\"info-item\">\n    Legend:\n  </div>\n</div>\n<div id=\"map\"></div>\n\n<div>{{trimmedJson}}</div>\n"
 
 /***/ }),
 
@@ -182,7 +182,7 @@ BackendService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21hcC9tYXAuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "body {\n    min-width: 60em;\n}\n\n.info-section {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n          flex-direction: column;\n  flex-flow: row wrap;\n  -webkit-box-pack: start;\n          justify-content: flex-start;\n  margin: 20px;\n}\n\n.info-item {\n  margin-right: auto;\n  min-width: 15em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFwL21hcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtFQUNFLG9CQUFhO0VBQWIsYUFBYTtFQUNiLDRCQUFzQjtFQUF0Qiw2QkFBc0I7VUFBdEIsc0JBQXNCO0VBQ3RCLG1CQUFtQjtFQUNuQix1QkFBMkI7VUFBM0IsMkJBQTJCO0VBQzNCLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixlQUFlO0FBQ2pCIiwiZmlsZSI6InNyYy9hcHAvbWFwL21hcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gICAgbWluLXdpZHRoOiA2MGVtO1xufVxuXG4uaW5mby1zZWN0aW9uIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgZmxleC1mbG93OiByb3cgd3JhcDtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LXN0YXJ0O1xuICBtYXJnaW46IDIwcHg7XG59XG5cbi5pbmZvLWl0ZW0ge1xuICBtYXJnaW4tcmlnaHQ6IGF1dG87XG4gIG1pbi13aWR0aDogMTVlbTtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -210,6 +210,20 @@ let MapComponent = class MapComponent {
         this.service = service;
         this.number_cases = 0;
         this.trimmedJson = '';
+        this.months = ["January", "Feburary", "March", "April", "May",
+            "June", "July", "August", "September",
+            "October", "November", "December"];
+        this.cases = ["Total",
+            "from same municipality",
+            "imported from other municipality",
+            "imported from other state",
+            "imported from other country"];
+        this.legendrows = [{ "0 cases": "cases-0" },
+            { "10 > cases": "cases-to-10" },
+            { "50 > cases": "cases-to-50" },
+            { "100 > cases": "cases-to-100" },
+            { "500 > cases": "cases-to-100" },
+            { "1000 > cases": "cases-to-100" }];
     }
     ngOnInit() {
         this.service.getGeoJson()
