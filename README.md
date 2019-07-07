@@ -214,7 +214,7 @@ None of the stories was more than half of the velocity in this sprint; therefore
 
 The front-end angular.io component demonstrating the counties of Brazil with 0 cases of Malaria.
 
-![Sprint 1 Running Code](img/sprint2 running code.png "Sprint 2 running front-end")
+![Sprint 2 Running Code](img/sprint2_running_code.png "Sprint 2 running front-end")
 
 ### Sprint 2 Daily Scrums 
 We performed daily scrums to inform each other where we were in progress towards the sprint goal, and to refocus efforts, and to resolve impediments as a team. We had videoconference on Friday, Saturday, and Sunday.
@@ -225,6 +225,9 @@ The following is an example from our Saturday scrum.
 - Fatma: Worked on Travis CI,  Fatma's impediment was to link Travis to github because Karen was the owner of the repo and only she could hook both up. Fatma contacted Karen to resolve the issue.
 - Karen: Filtered county display for NorthWestern Brazilian counties, researched Selenium and Protractor
 - Vikram:	Created Heroku account,  researched Heroku deployment process, worked on resolving Heroku deployment related errors
+
+Zoom Screenshot:
+![Sprint 2 Scrum](img/sprint2_Scrum_Jul6th.png "Sprint 2 Saturday Scrum")
 
 
 ### Sprint 1 Sprint Review
