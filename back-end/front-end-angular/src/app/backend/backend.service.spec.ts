@@ -1,21 +1,47 @@
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule, HttpTestingController, TestRequest } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+//import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { BackendService } from './backend.service';
 
 describe('BackendService', () => {
   let backendService: BackendService;
-  let httpTestingController: HttpTestingController;
+  let httpController: HttpTestingController;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ HttpClientTestingModule ]
+      imports: [ HttpClientTestingModule ],
+      providers: [BackendService]
     });
     backendService = TestBed.get(BackendService);
+    httpController = TestBed.get(HttpTestingController);
   });
+
   it('should create the backend service', () => {
     expect(backendService).toBeTruthy();
   });
+
+  it('(does have expectation) should call the getGeoJson service at \"localhost:8080/geojson/brazil\"', async (done) => {
+    backendService.getGeoJson().subscribe(data => {});
+    const call: TestRequest =
+      httpController.expectOne(`localhost:8080/geojson/brazil`);
+     httpController.verify();
+     done();
+  });
+
+  it('(does have expectation) should call getBackupGeoJson service at \"static/BRA_adm3_NorthWest\"', async () => {
+    backendService.getBackupGeoJson().subscribe(data => {});
+    const call: TestRequest =
+      httpController.expectOne(`static/BRA_adm3_NorthWest.json`);
+    httpController.verify();
+  });
+
+  it('(does have expectation) should return json data from getBackupGeoJson', async () => {
+    backendService.getBackupGeoJson().subscribe();
+    const req = httpController.expectOne(req => req.url.includes('static'));
+    //expect(req.request.params.has('')).toBeTruthy();
+    req.flush({});
+  });
+
 });
 
 const mockMalariaData = {
