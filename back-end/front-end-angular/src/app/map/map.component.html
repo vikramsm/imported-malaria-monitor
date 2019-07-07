@@ -1,6 +1,22 @@
 <h2>Brazil By County</h2>
-<h3>Total Cases Shown: {{number_cases}}</h3>
-
+<div class="info-section">
+<div class="h3 info-item">Total Cases Shown: {{number_cases}}</div>
+  <div class="month-filter-option" class="info-item">
+  <label for="month-filter">Month: </label>
+   <select id="month-filter" type="month" name="month-filter">
+     <option *ngFor = "let i of months">{{i}}</option>
+   </select>
+  </div>
+  <div class="case-filter-option" class="info-item">
+  <label for="case-filter">Imported Cases: </label>
+   <select id="case-filter" name="case-filter">
+     <option *ngFor = "let i of cases">{{i}}</option>
+   </select>
+   </div>
+  <div id="legend" class="info-item">
+    Legend:
+  </div>
+</div>
 <div id="map"></div>
 
 <div>{{trimmedJson}}</div>

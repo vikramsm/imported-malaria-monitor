@@ -13,6 +13,22 @@ export class MapComponent implements OnInit {
 
   number_cases = 0;
   trimmedJson = '';
+  months = ["January", "Feburary", "March", "April", "May",
+           "June", "July", "August", "September",
+           "October", "November", "December"];
+
+  cases = ["Total",
+           "from same municipality",
+           "imported from other municipality",
+           "imported from other state",
+           "imported from other country"];
+
+  legendrows = [{"0 cases": "cases-0"},
+            {"10 > cases": "cases-to-10"},
+            {"50 > cases": "cases-to-50"},
+            {"100 > cases": "cases-to-100"},
+            {"500 > cases": "cases-to-100"},
+            {"1000 > cases": "cases-to-100"}];
 
   constructor(private service: BackendService) {
   }
