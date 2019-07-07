@@ -108,3 +108,6 @@ ENV/
 #osx artifacts
 .DS_Store
 
+#angular.io & Django dev artifact
+webpack-stats.json
+

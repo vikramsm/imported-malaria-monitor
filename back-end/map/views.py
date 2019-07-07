@@ -4,6 +4,10 @@ from django.shortcuts import render
 from .models import MalariaCase
 
 # Create your views here.
+
+def home(request):
+   return render(request, "map/home.html")
+
 def index(request):
     context = {
         "malariaCases" : MalariaCase.objects.all()
