@@ -26,7 +26,7 @@ SECRET_KEY = '+vzl-pm1rsk3!z$(o((8alc(=b4*+6@c@$z@0%7!=-2_bu@&86'
 DEBUG = True
 
 ALLOWED_HOSTS = ['imported-malaria-monitor.herokuapp.com',
-                 'localhost']
+                 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 WEBPACK_LOADER = {
     'DEFAULT': {
         'BUNDLE_DIR_NAME': '',
-        'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats.json'),
+        'STATS_FILE': os.path.join(BASE_DIR, 'static_content/webpack-stats.json'),
     }
 }
 

@@ -1,9 +1,0 @@
-* Angular Setup (https://angular.io/start)
-** Install Dependencies
-  - Install node.js
-    - "node --version" to make sure installed correctly
-  - "npm install -g @angular/cli" to install angular cli
-  - "ng --version" to check angular installed correctly
-* Angular devel commands
-  - "ng new angular-demo" to create new angular app
-  

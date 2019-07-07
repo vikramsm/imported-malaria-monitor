@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/kdolan/Projects/CSCIS-71-Agile/imported-malaria-monitor/front-end/IMM/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /Users/kdolan/Projects/CSCIS-71-Agile/merge-IMM-repos/imported-malaria-monitor/back-end/front-end-angular/src/styles.css */"./src/styles.css");
 
 
 /***/ })

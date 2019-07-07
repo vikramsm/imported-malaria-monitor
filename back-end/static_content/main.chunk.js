@@ -316,7 +316,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/kdolan/Projects/CSCIS-71-Agile/imported-malaria-monitor/front-end/IMM/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/kdolan/Projects/CSCIS-71-Agile/merge-IMM-repos/imported-malaria-monitor/back-end/front-end-angular/src/main.ts */"./src/main.ts");
 
 
 /***/ })

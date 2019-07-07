@@ -5,11 +5,10 @@ const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path')
 
-/*...*/
 module.exports  = {
 
     "output": {
-        "path":  path.resolve('../../back-end/static_content/'),
+        "path":  path.resolve('../static_content/'),
         "filename": "[name].bundle.js",
         "chunkFilename":  "[id].chunk.js",
         "crossOriginLoading":  false,
@@ -21,10 +20,10 @@ module.exports  = {
         "publicPath":  "http://127.0.0.1:4200/"//2
     },
     plugins:[
-        new BundleTracker({filename: '../../webpack-stats.json'}),
+        new BundleTracker({filename: '../static_content/webpack-stats.json'}),
         new CopyPlugin([
           { from: 'src/static/**', 
-            to: '../../back-end/static_content/[name].[ext]',
+            to: '../static_content/[name].[ext]',
             toType: 'template',
             ignore: 'BRA_adm3.json'}
         ]),
