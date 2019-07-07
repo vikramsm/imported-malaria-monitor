@@ -164,3 +164,75 @@ The following is an example from our Monday scrum.
 The Project Owner demonstrated the Sprint 1 working software to the Stakeholder, Marcia. Marcia provided useful feedback back to the Project Owner that was added to the Product Backlog. Marcia said that the Brazil county map looks good, it was what she had in mind. But, she felt that the county map loaded too slowy and would like it to be more responsive. In addition, Marcia provided more clarification about desired UI components. For example: a dropdown selection of month being displayed, a dropdown selection of type of map, a map legend specifying color codes.
 
 ![Sprint 1 Sprint Review](img/sprint1_review.jpeg "Sprint 1 Sprint Review")
+
+#################################################
+
+## SPRINT 2 (Due July 8th, 3 pm)
+
+### Forecast Velocity
+Our initial velocity forecast is of 8 Story Points per Sprint. Our forecast is based on Yesterday's weather. As we progress and as the team matures, we expect to increase the velocity.
+
+### Sprint Backlog 
+Sprint 2 Backlog and Tasks can be found here: https://trello.com/b/2R8EOqim/imported-malaria-monitor
+
+None of the stories was more than half of the velocity in this sprint; therefore, no refinement was needed.  
+
+### What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal? Annotate your team's response so it's clear which team members did which activities.
+
+Derek: Created tests and implemented databases for backend and front end listing
+Fatma: Worked on Travis CI
+Karen: Filtered county display for NorthWestern Brazilian counties, researched Selenium and Protractor
+Vikram:	Created Heroku account,  researched Heroku deployment process, worked on resolving Heroku deployment related errors
+
+### What will you do in the next 24 hours to help the Development Team meet the Sprint Goal? Annotate your team's response so it's clear which team members plan to do which activities.
+
+Derek: Finish writing tests, incorporate Travis (CI) into project, finalize heroku deployment and merge angular frontend with backend, set up a meeting with the stakeholder
+Fatma: Keep in touch with Derek about Travis, documentation
+Karen: Test driven design of UI elements and Angular-Django continious developement integration.
+Vikram: Assist with Heroku deployment and writing tests.
+
+### Impediments we had and how we removed them
+
+
+### Sprint 2 Burndown
+![Sprint 1 Burndown Chart](img/sprint2_burndown_chart.png "Sprint 2 Burndown")
+
+### Sprint 2 Mob Programming & Pair Programming
+![Pair Programming 1](img/sprint2_FatmaKarenPeerProg.png "Pair Programming 1")
+![Pair Programming 2](img/sprint2_VikramKarenPeerProg.png "Pair Programming 2")
+
+### Sprint 2 TDD
+
+#### Front-End UI
+
+![Sprint 2 TDD](img/unitTestsFrontEndSideJul4.png "Sprint 1 TDD")
+
+#### Back-End Server
+
+
+### Sprint 2 Evidence of Running Program
+
+The front-end angular.io component demonstrating the counties of Brazil with 0 cases of Malaria.
+
+![Sprint 2 Running Code](img/sprint2 running code.png "Sprint 2 running front-end")
+
+### Sprint 1 Daily Scrums ---NOT EDITED YET
+We performed daily scrums to inform each other where we were in progress towards the sprint goal, and to refocus efforts, and to resolve impediments as a team. We had videoconference on Monday and met after class on Tuesday and Wednesday. 
+
+The following is an example from our Monday scrum.
+
+- Karen had reviewed muiltiple UI tools, and found one that is free, easy to use and applicable to rendering visual GeoJSON data for the sprint goal. Karen will investigate control options for the tool for better display (panning). Karen's impediment is the large size of rendering the GeoData.
+
+- Vikram had considered several back end options and determined that Django and Python will provide the most flexible and easy option. Vikram will investigate deployment. Vikram feels he has no impediments at this time.
+
+- Fatma had been working on the behavioral aspect of the sprint's user story, with knowledge of larger picture of the product backlog. Fatma had identified further areas of division in the sprint story and associated tasks. Fatma will continue refining tasks. Fatma has no impediments at this time.
+
+- Derek had communicated with Stakeholder to clarify visual aspects of the first sprint. Derek had also invested UI and back end frameworks to pool information with the team. Derek's impediment, at the time of the scrum, was finding the opportunity to retrieve sample source data from the Stakeholder.
+
+### Sprint 1 Sprint Review
+
+The Project Owner demonstrated the Sprint 1 working software to the Stakeholder, Marcia. Marcia provided useful feedback back to the Project Owner that was added to the Product Backlog. Marcia said that the Brazil county map looks good, it was what she had in mind. But, she felt that the county map loaded too slowy and would like it to be more responsive. In addition, Marcia provided more clarification about desired UI components. For example: a dropdown selection of month being displayed, a dropdown selection of type of map, a map legend specifying color codes.
+
+![Sprint 1 Sprint Review](img/sprint1_review.jpeg "Sprint 1 Sprint Review")
+
+
