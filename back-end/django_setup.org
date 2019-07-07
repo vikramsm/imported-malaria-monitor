@@ -24,3 +24,5 @@
    https://elements.heroku.com/buildpacks/timanovsky/subdir-heroku-buildpack
 ** Django Heroku Deployment tutorial
    https://www.codementor.io/jamesezechukwu/how-to-deploy-django-app-on-heroku-dtsee04d4
+** Database Setup
+   heroku ps:scale web=1
