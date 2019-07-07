@@ -5,12 +5,15 @@ from .models import MalariaCase
 
 # Create your views here.
 def index(request):
+    return HttpResponse("Imported Malaria Monitor")
+
+def databaseIndex(request):
     context = {
         "malariaCases" : MalariaCase.objects.all()
     }
-    return render(request, "map/index.html", context)
+    return render(request, "map/databaseindex.html", context)
 
-def malariacase(request, case_id):
+def malariaCase(request, case_id):
     try:
         case = MalariaCase.objects.get(pk=case_id)
     except MalariaCase.DoesNotExist:

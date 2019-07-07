@@ -25,7 +25,8 @@ SECRET_KEY = '+vzl-pm1rsk3!z$(o((8alc(=b4*+6@c@$z@0%7!=-2_bu@&86'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['imported-malaria-monitor.herokuapp.com']
+ALLOWED_HOSTS = ['imported-malaria-monitor.herokuapp.com',
+                 'localhost']
 
 
 # Application definition
