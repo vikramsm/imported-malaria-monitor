@@ -18,3 +18,7 @@
    - "python3 manage.py createsuperuser" - to create superuser (admin back-end)
 * Django Shell
   python3 manage.py shell
+* Heroku Deployment
+** Django Produce Path (Root in subdirectory)
+   https://coderwall.com/p/ssxp5q/heroku-deployment-without-the-app-being-at-the-repo-root-in-a-subfolder
+   https://elements.heroku.com/buildpacks/timanovsky/subdir-heroku-buildpack
