@@ -1,10 +1,10 @@
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { BackendService } from './backend/backend.service';
 
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
+import { BackendService } from './backend/backend.service';
 
 @NgModule({
   imports: [

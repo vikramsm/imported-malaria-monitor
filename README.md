@@ -192,9 +192,11 @@ None of the stories was more than half of the velocity in this sprint; therefore
 - Vikram: Write tests
 
 ### Impediments we had and how we removed them
-????
 
-### Sprint 2 Burndown
+Impediments included technical difficulties with the new tool sets for the project. We switched code repositories, in order for team members with the most skills with Heroku deployes could focus their effort with full admin rights. We had difficulty meeting with the stakeholder as a team in the last sprint review. This time the P.O. coordinated a meeting, where we could all meet with the stakehodler, well in advance.
+
+### Sprint 2 Burndown Chart
+
 ![Sprint 1 Burndown Chart](img/sprint2_burndown_chart.png "Sprint 2 Burndown")
 
 ### Sprint 2 Mob Programming & Pair Programming
@@ -202,10 +204,12 @@ None of the stories was more than half of the velocity in this sprint; therefore
 ![Pair Programming 2](img/sprint2_VikramKarenPeerProg.png "Pair Programming 2")
 
 ### Sprint 2 TDD
-???? 
 
-#### Front-End UI
-????
+#### Front-End UI Test Driven Design
+
+The visual elements requested by the stakeholder were written into UI unit tests.
+
+![Sprint 2 UI TDD](img/UI-element-units.png "Sprint 2 UI TDD")
 
 #### Back-End Server
 ????
@@ -226,11 +230,11 @@ The following is an example from our Saturday scrum.
 - Karen: Filtered county display for NorthWestern Brazilian counties, researched Selenium and Protractor
 - Vikram:	Created Heroku account,  researched Heroku deployment process, worked on resolving Heroku deployment related errors
 
-Zoom Screenshot:
+Zoom MeetingScreenshot:
 ![Sprint 2 Scrum](img/sprint2_Scrum_Jul6th.png "Sprint 2 Saturday Scrum")
 
 
-### Sprint 1 Sprint Review
+### Sprint 2 Sprint Review
 ????
 
 

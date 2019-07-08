@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MapComponent } from './map.component';
 //import { HttpClient } from '@angular/common/http';
 import { BackendService } from '../backend/backend.service';
+import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
 
 describe('MapComponent', () => {
@@ -34,14 +35,55 @@ describe('MapComponent', () => {
     done();
   });
 
-  it('should have created a map', async (done) => {
+  it('should have created a map object', async (done) => {
     expect(component.getMap().isEmpty).toBeFalsy();
     done();
   });
 
-  it('should have a map with a zoom level', async (done) => {
+  it('should have a map object with a zoom level', async (done) => {
     expect(component.getMap().getZoom()).toEqual(6);
     done();
+  });
+
+  it('should have a minimum zoom level', async (done) => {
+    expect(component.getMap().getMinZoom()).toEqual(5);
+    done();
+  });
+
+  it('should have a title', () => {
+    const de = fixture.debugElement.query(By.css('h2'));
+    const el = de.nativeElement;
+    expect(el.textContent).toContain("Brazil By County");
+  });
+
+  it('should have an information section', () => {
+    const de = fixture.debugElement.query(By.css('.info-section'));
+    expect(de.nativeElement).toBeTruthy();
+  });
+
+  it('should have a month UI element', () => {
+    const de = fixture.debugElement.query(By.css('#month-filter'));
+    expect(de.nativeElement).toBeTruthy();
+  });
+
+  it('should have a cases type UI element', () => {
+    const de = fixture.debugElement.query(By.css('#case-filter'));
+    expect(de.nativeElement).toBeTruthy();
+  });
+
+  it('should have a legend UI element', () => {
+    const de = fixture.debugElement.query(By.css('#legend'));
+    expect(de.nativeElement).toBeTruthy();
+  });
+
+  it('should have a map UI element', () => {
+    const de = fixture.debugElement.query(By.css('#map'));
+    expect(de.nativeElement).toBeTruthy();
+  });
+
+  it('should show total cases found', () => {
+    const de = fixture.debugElement.query(By.css('#cases-total-found'));
+    expect(de.nativeElement).toBeTruthy();
   });
 
 });
