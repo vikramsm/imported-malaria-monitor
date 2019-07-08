@@ -186,8 +186,8 @@ None of the stories was more than half of the velocity in this sprint; therefore
 
 ### What will you do in the next 24 hours to help the Development Team meet the Sprint Goal? Annotate your team's response so it's clear which team members plan to do which activities.
 
-- Derek: Finish writing tests, set up a meeting with the stakeholder
-- Fatma: documentation
+- Derek: Finish implementing backend, set up a meeting with the stakeholder
+- Fatma: Write Documentation
 - Karen: Test driven design of UI elements, documentation
 - Vikram: Write tests
 
