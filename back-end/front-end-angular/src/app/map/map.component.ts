@@ -1,13 +1,16 @@
 declare var require: any
 import * as leaflet from 'leaflet';
 import { Component, OnInit } from '@angular/core';
-import { HttpClientModule } from  '@angular/common/http'
+//import { HttpClientModule } from  '@angular/common/http'
 import { BackendService } from '../backend/backend.service';
+
+let map;
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css']
+  styleUrls: ['./map.component.css'],
+  providers: [BackendService]
 })
 export class MapComponent implements OnInit {
 
@@ -30,8 +33,7 @@ export class MapComponent implements OnInit {
             {"500 > cases": "cases-to-100"},
             {"1000 > cases": "cases-to-100"}];
 
-  constructor(private service: BackendService) {
-  }
+  constructor(private service: BackendService) {}
 
   ngOnInit() {
     this.service.getGeoJson()
@@ -46,10 +48,19 @@ export class MapComponent implements OnInit {
       .then(response => {this.makeMap(response)})
   };
 
+  getMap = () => {
+    return map;
+  }
+
   makeMap(geoJson) {
+    // if refreshing map, remove the old one
+    if (map) {
+      map.off();
+      map.remove();
+    }
 
     // start with a view in the middle of Brazil, zoom level 6
-    var map = leaflet.map('map').setView([-5.00, -59.00], 6);
+    map = leaflet.map('map').setView([-5.00, -59.00], 6);
 
     // Add the goemap and test adding data to the item
     leaflet.geoJSON(geoJson, {

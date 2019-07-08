@@ -1,37 +1,159 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientModule } from  '@angular/common/http'
-import { BackendService } from '../backend/backend.service';
 import { MapComponent } from './map.component';
-import { Observable, of } from 'rxjs';
-//import { of } from 'rxjs/add/observable/of';
-
+//import { HttpClient } from '@angular/common/http';
+import { BackendService } from '../backend/backend.service';
+import { of } from 'rxjs';
 
 describe('MapComponent', () => {
+
   let component: MapComponent;
   let fixture: ComponentFixture<MapComponent>;
-  let backendSpy: jasmine.SpyObj<BackendService>;
+  let mockBackendService;
 
   beforeEach(async(() => {
-    backendSpy = jasmine.createSpyObj('BackendService', ['getGeoJson', 'getBackupGeoJson']);
-
-    //spyOn(backendSpy, 'getGeoJson').and.callFake(() => of(new Object("abc")));
-    //spyOn(backendSpy, 'getBackupGeoJson').and.callFake(() => of(new Object("abc")));
+    mockBackendService = jasmine.createSpyObj('service',
+         ['getGeoJson','getBackupGeoJson']
+    );
     TestBed.configureTestingModule({
-      declarations: [ MapComponent ],
-      providers: [
-        { provide: BackendService,
-          useValue: backendSpy }],
+      declarations: [ MapComponent ]
+    });
+    TestBed.overrideProvider(BackendService, {
+      useValue: mockBackendService
     })
-    .compileComponents();
+    .compileComponents().then(() => {
+      fixture = TestBed.createComponent(MapComponent);
+      component = fixture.componentInstance;
+      mockBackendService.getGeoJson.and.returnValue(of(mockGeoJsonData)); // added this line
+      mockBackendService.getBackupGeoJson.and.returnValue(of(mockGeoJsonData)); // added this line
+      fixture.detectChanges();
+    })
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(MapComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  it('should be created', async (done) => {
+    expect(component).toBeTruthy();
+    done();
   });
 
-  xit('should create', async () => {
-    expect(component).toBeTruthy();
+  it('should have created a map', async (done) => {
+    expect(component.getMap().isEmpty).toBeFalsy();
+    done();
   });
+
+  it('should have a map with a zoom level', async (done) => {
+    expect(component.getMap().getZoom()).toEqual(6);
+    done();
+  });
+
 });
+
+const mockMalariaData = {
+  "cases": [{
+    "LOC_NOTIF_0": "Brazil",
+    "LOC_NOTIF_1": "Acre",
+    "LOC_NOTIF_2": "Acrelândia",
+    "LOC_NOTIF_3": "Acrelândia",
+    "LOC_INFE_0": "Brazil",
+    "LOC_INFE_1": "Acre",
+    "LOC_INFE_2": "Acrelândia",
+    "LOC_INFE_3": "Acrelândia",
+    "DT_EXAME": "15/11/18",
+    "DT_NOTIF": "15/11/18",
+  },{
+    "LOC_NOTIF_0": "Brazil",
+    "LOC_NOTIF_1": "Acre",
+    "LOC_NOTIF_2": "Acrelândia",
+    "LOC_NOTIF_3": "Acrelândia",
+    "LOC_INFE_0": "Brazil",
+    "LOC_INFE_1": "Amazonas",
+    "LOC_INFE_2": "Apuí",
+    "LOC_INFE_3": "Apuí",
+    "DT_EXAME": "15/14/18",
+    "DT_NOTIF": "15/14/18",
+  }]
+};
+
+const mockGeoJsonData = [
+  {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -67.10585784912104,
+                -9.688110351562443
+              ],
+              [
+                -67.0598373413086,
+                -9.706650733947754
+              ],
+              [
+                -66.80647277832031,
+                -9.814519882202092
+              ]
+            ]
+          ]
+        },
+        "properties": {
+          "ID_0": 33,
+          "ISO": "BRA",
+          "NAME_0": "Brazil",
+          "ID_1": 1,
+          "NAME_1": "Acre",
+          "ID_2": 1,
+          "NAME_2": "Acrelândia",
+          "ID_3": 1,
+          "NAME_3": "Acrelândia",
+          "CCN_3": 0,
+          "CCA_3": "",
+          "TYPE_3": "Distrito",
+          "ENGTYPE_3": "District",
+          "NL_NAME_3": "",
+          "VARNAME_3": ""
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -70.62722778320307,
+                -10.71923923492426
+              ],
+              [
+                -70.61453247070307,
+                -10.705829620361328
+              ],
+              [
+                -70.59915161132812,
+                -10.699858665466309
+              ]
+            ]
+          ]
+        },
+        "properties": {
+          "ID_0": 33,
+          "ISO": "BRA",
+          "NAME_0": "Brazil",
+          "ID_1": 1,
+          "NAME_1": "Acre",
+          "ID_2": 1,
+          "NAME_2": "Acrelândia",
+          "ID_3": 1,
+          "NAME_3": "Acrelândia",
+          "CCN_3": 0,
+          "CCA_3": "",
+          "TYPE_3": "Distrito",
+          "ENGTYPE_3": "District",
+          "NL_NAME_3": "",
+          "VARNAME_3": ""
+        }
+      }
+    ]
+  }
+];

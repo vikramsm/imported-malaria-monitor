@@ -119,7 +119,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
+            _backend_backend_service__WEBPACK_IMPORTED_MODULE_6__["BackendService"]
         ],
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
@@ -204,6 +205,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+//import { HttpClientModule } from  '@angular/common/http'
 
 let MapComponent = class MapComponent {
     constructor(service) {
@@ -261,6 +263,7 @@ MapComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-map',
         template: __webpack_require__(/*! raw-loader!./map.component.html */ "./node_modules/raw-loader/index.js!./src/app/map/map.component.html"),
+        providers: [_backend_backend_service__WEBPACK_IMPORTED_MODULE_3__["BackendService"]],
         styles: [__webpack_require__(/*! ./map.component.css */ "./src/app/map/map.component.css")]
     })
 ], MapComponent);
