@@ -186,14 +186,14 @@ None of the stories was more than half of the velocity in this sprint; therefore
 
 ### What will you do in the next 24 hours to help the Development Team meet the Sprint Goal? Annotate your team's response so it's clear which team members plan to do which activities.
 
-- Derek: Finish writing tests, set up a meeting with the stakeholder
-- Fatma: documentation
+- Derek: Finish implementing backend, set up a meeting with the stakeholder
+- Fatma: Write Documentation
 - Karen: Test driven design of UI elements, documentation
 - Vikram: Write tests
 
 ### Impediments we had and how we removed them
 
-Impediments included technical difficulties with the new tool sets for the project. We switched code repositories, in order for team members with the most skills with Heroku deployes could focus their effort with full admin rights. We had difficulty meeting with the stakeholder as a team in the last sprint review. This time the P.O. coordinated a meeting, where we could all meet with the stakehodler, well in advance.
+Impediments included technical difficulties with the new tool sets for the project. We switched code repositories, in order for team members with the most skills with Heroku deployments could focus their effort with full admin rights. We had difficulty meeting with the stakeholder as a team in the last sprint review. This time the P.O. coordinated a meeting, where we could all meet with the stakehodler well in advance.
 
 ### Sprint 2 Burndown Chart
 
