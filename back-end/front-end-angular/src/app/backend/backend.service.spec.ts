@@ -19,20 +19,22 @@ describe('BackendService', () => {
     expect(backendService).toBeTruthy();
   });
 
-  it('(does have expectation) should call the getGeoJson service at \"localhost:8080/geojson/brazil\"', async (done) => {
+  it('should call the getGeoJson service at \"localhost:8080/geojson/brazil\"', async () => {
     backendService.getGeoJson().subscribe(data => {});
     const call: TestRequest =
       httpController.expectOne(`localhost:8080/geojson/brazil`);
      httpController.verify();
-     done();
+     // the empty expect used to acknowledge the verify text above
+     expect().nothing();
   });
 
-  it('(does have expectation) should call getBackupGeoJson service at \"static/BRA_adm3_NorthWest\"', async (done) => {
+  it('should call getBackupGeoJson service at \"static/BRA_adm3_NorthWest\"', async () => {
     backendService.getBackupGeoJson().subscribe(data => {});
     const call: TestRequest =
       httpController.expectOne(`static/BRA_adm3_NorthWest.json`);
     httpController.verify();
-    done();
+    // the empty expect used to acknowledge the verify text above
+    expect().nothing();
   });
 
   it('should return a resonse type of json', async () => {

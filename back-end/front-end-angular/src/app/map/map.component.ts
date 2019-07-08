@@ -60,7 +60,7 @@ export class MapComponent implements OnInit {
     }
 
     // start with a view in the middle of Brazil, zoom level 6
-    map = leaflet.map('map').setView([-5.00, -59.00], 6);
+    map = leaflet.map('map', {minZoom: 5}).setView([-5.00, -59.00], 6);
 
     // Add the goemap and test adding data to the item
     leaflet.geoJSON(geoJson, {
