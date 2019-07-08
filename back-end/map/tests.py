@@ -68,3 +68,13 @@ class ModelsTestCase(TestCase):
         m = Municipality.objects.get(code=1)
         self.assertEqual(m.origin.count(), 1)
 
+    def testCountCases(self):
+        allCases = MalariaCase.objects.all()
+        self.assertEqual(len(allCases), 3)
+
+    def testAddCases(self):
+        m1 = Municipality.objects.create(code=3, name="name3", state="ST")
+        m2 = Municipality.objects.create(code=4, name="name4", state="ST2")
+        MalariaCase.objects.create(munNoti=m1, munResi=m1, munInfe=m2, paisRes=2)
+        allCases = MalariaCase.objects.all()
+        self.assertEqual(len(allCases), 4)
