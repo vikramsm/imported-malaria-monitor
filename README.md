@@ -212,7 +212,7 @@ The visual elements requested by the stakeholder were written into UI unit tests
 ![Sprint 2 UI TDD](img/UI-element-units.png "Sprint 2 UI TDD")
 
 #### Back-End Server
-????
+![Sprint 2 Backend TDD](img/backend_tests.png "Sprint 2 Backend TDD")
 
 ### Sprint 2 Evidence of Running Program
 
