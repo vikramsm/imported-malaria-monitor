@@ -11,13 +11,50 @@ class ModelsTestCase(TestCase):
     def testCreateMunicipality(self):
         self.assertTrue(Municipality(code=1, name="Name", state="ST"))
 
+    def testMunicipalityCode(self):
+        m1 = Municipality(code=1, name="Name", state="ST")
+        self.assertEqual(m1.code, 1)
+
+    def testMunicipalityName(self):
+        m1 = Municipality(code=1, name="Name", state="ST")
+        self.assertEqual(m1.name, "Name")
+
+    def testMunicipalityState(self):
+        m1 = Municipality(code=1, name="Name", state="ST")
+        self.assertEqual(m1.state, "ST")
+
     def testCreateMalariaCase(self):
         m1 = Municipality(code=1, name="Name", state="ST")
         self.assertTrue(MalariaCase(munNoti=m1, munResi=m1, munInfe=m1, paisRes=1))
 
+    def testMalariaCaseMunNoti(self):
+        m1 = Municipality(code=1, name="Name", state="ST")
+        case = MalariaCase(munNoti=m1, munResi=m1, munInfe=m1, paisRes=1)
+        self.assertEqual(case.munNoti, m1)
+
+    def testMalariaCaseMunResi(self):
+        m1 = Municipality(code=1, name="Name", state="ST")
+        case = MalariaCase(munNoti=m1, munResi=m1, munInfe=m1, paisRes=1)
+        self.assertEqual(case.munResi, m1)
+
+    def testMalariaCaseMunInfe(self):
+        m1 = Municipality(code=1, name="Name", state="ST")
+        case = MalariaCase(munNoti=m1, munResi=m1, munInfe=m1, paisRes=1)
+        self.assertEqual(case.munInfe, m1)
+
+    def testMalariaCaseMunPais(self):
+        m1 = Municipality(code=1, name="Name", state="ST")
+        case = MalariaCase(munNoti=m1, munResi=m1, munInfe=m1, paisRes=1)
+        self.assertEqual(case.paisRes, 1)
+
     def testNotValidCases(self):
         testCase = MalariaCase.objects.get(paisRes=2)
         self.assertFalse(testCase.isValid())
+
+    def testValidCaseSameCounty(self):
+        m1 = Municipality(code=1, name="Name", state="ST")
+        case = MalariaCase(munNoti=m1, munResi=m1, munInfe=m1, paisRes=1)
+        self.assertTrue(case.isValid())
 
     def testValidCase(self):
         testCase = MalariaCase.objects.get(paisRes=1)
