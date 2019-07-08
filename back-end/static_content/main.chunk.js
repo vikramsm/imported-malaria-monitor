@@ -41,7 +41,7 @@ module.exports = "<h1>{{title}}</h1>\n<app-map></app-map>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Brazil By County</h2>\n<div class=\"info-section\">\n<div class=\"h3 info-item\">Total Cases Shown: {{number_cases}}</div>\n  <div class=\"month-filter-option\" class=\"info-item\">\n  <label for=\"month-filter\">Month: </label>\n   <select id=\"month-filter\" type=\"month\" name=\"month-filter\">\n     <option *ngFor = \"let i of months\">{{i}}</option>\n   </select>\n  </div>\n  <div class=\"case-filter-option\" class=\"info-item\">\n  <label for=\"case-filter\">Imported Cases: </label>\n   <select id=\"case-filter\" name=\"case-filter\">\n     <option *ngFor = \"let i of cases\">{{i}}</option>\n   </select>\n   </div>\n  <div id=\"legend\" class=\"info-item\">\n    Legend:\n  </div>\n</div>\n<div id=\"map\"></div>\n\n<div>{{trimmedJson}}</div>\n"
+module.exports = "<h2>Brazil By County</h2>\n<div class=\"info-section\">\n<div class=\"h3 info-item\" id=\"cases-total-found\">Total Cases Shown: {{number_cases}}</div>\n  <div class=\"month-filter-option\" class=\"info-item\">\n  <label for=\"month-filter\">Month: </label>\n   <select id=\"month-filter\" type=\"month\" name=\"month-filter\">\n     <option *ngFor = \"let i of months\">{{i}}</option>\n   </select>\n  </div>\n  <div class=\"case-filter-option\" class=\"info-item\">\n  <label for=\"case-filter\">Imported Cases: </label>\n   <select id=\"case-filter\" name=\"case-filter\">\n     <option *ngFor = \"let i of cases\">{{i}}</option>\n   </select>\n   </div>\n  <div id=\"legend\" class=\"info-item\">\n    Legend:\n  </div>\n</div>\n<div id=\"map\"></div>\n\n<div>{{trimmedJson}}</div>\n"
 
 /***/ }),
 
@@ -100,9 +100,9 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _map_map_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./map/map.component */ "./src/app/map/map.component.ts");
 /* harmony import */ var _backend_backend_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./backend/backend.service */ "./src/app/backend/backend.service.ts");
@@ -116,11 +116,10 @@ __webpack_require__.r(__webpack_exports__);
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-            _backend_backend_service__WEBPACK_IMPORTED_MODULE_6__["BackendService"]
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClientModule"]
         ],
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
@@ -128,7 +127,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         ],
         providers: [_backend_backend_service__WEBPACK_IMPORTED_MODULE_6__["BackendService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
-        schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]]
+        schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["CUSTOM_ELEMENTS_SCHEMA"]]
     })
 ], AppModule);
 
@@ -207,6 +206,7 @@ __webpack_require__.r(__webpack_exports__);
 
 //import { HttpClientModule } from  '@angular/common/http'
 
+let map;
 let MapComponent = class MapComponent {
     constructor(service) {
         this.service = service;
@@ -226,6 +226,9 @@ let MapComponent = class MapComponent {
             { "100 > cases": "cases-to-100" },
             { "500 > cases": "cases-to-100" },
             { "1000 > cases": "cases-to-100" }];
+        this.getMap = () => {
+            return map;
+        };
     }
     ngOnInit() {
         this.service.getGeoJson()
@@ -240,8 +243,13 @@ let MapComponent = class MapComponent {
     }
     ;
     makeMap(geoJson) {
+        // if refreshing map, remove the old one
+        if (map) {
+            map.off();
+            map.remove();
+        }
         // start with a view in the middle of Brazil, zoom level 6
-        var map = leaflet__WEBPACK_IMPORTED_MODULE_1__["map"]('map').setView([-5.00, -59.00], 6);
+        map = leaflet__WEBPACK_IMPORTED_MODULE_1__["map"]('map', { minZoom: 5 }).setView([-5.00, -59.00], 6);
         // Add the goemap and test adding data to the item
         leaflet__WEBPACK_IMPORTED_MODULE_1__["geoJSON"](geoJson, {
             onEachFeature: function (feature, layer) {
