@@ -200,10 +200,16 @@ Impediments included technical difficulties with the new tool sets for the proje
 ![Sprint 1 Burndown Chart](img/sprint2_burndown_chart.png "Sprint 2 Burndown")
 
 ### Sprint 2 Mob Programming & Pair Programming
+
+In Sprint 2, dev team members pair worked several times through Zoom conference shared screen. The following screen shots show two members assessing the Travis config and two members working on the UI elements. The Heroku integration was also a paired effort.
+
+
 ![Pair Programming 1](img/sprint2_FatmaKarenPeerProg.png "Pair Programming 1")
 ![Pair Programming 2](img/sprint2_VikramKarenPeerProg.png "Pair Programming 2")
 
 ### Sprint 2 TDD
+
+The Imported Malaria Monitor tests are for the two areas of the project, front-end amd back-end. Combined there are 39 test to represent stakeholder stories.
 
 #### Front-End UI Test Driven Design
 
@@ -215,7 +221,7 @@ The visual elements requested by the stakeholder were written into UI unit tests
 ![Sprint 2 Backend TDD](img/backend_tests.png "Sprint 2 Backend TDD")
 
 ### Sprint 2 CI - Travis
-We setup Travis CI to automatically test our code as commits are pushed to github
+We setup Travis CI to automatically test our code as commits are pushed to github.
 ![Sprint 2 CI Github](img/github_tests.png "Sprint 2 CI Github")
 ![Sprint 2 CI](img/travis_tests.png "Sprint 2 CI")
 
@@ -246,5 +252,4 @@ Zoom MeetingScreenshot:
 
 ### Sprint 2 Sprint Review
 ????
-
 
