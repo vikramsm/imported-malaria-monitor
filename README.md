@@ -251,7 +251,7 @@ Zoom MeetingScreenshot:
 
 
 ### Sprint 2 Sprint Review
-The development team, the product owner, and our stakeholder Marcia had a zoom conference and demonstrated the product. We received and noted our stakeholder's feedback and will take into consideration in the next sprint.
+The development team, the product owner, and our stakeholder Marcia had a zoom conference and demonstrated the product. We received and noted our stakeholder's feedback and revised our product backlog.
 The following is the feedback from our stakeholder:
 
 - Add year + month
