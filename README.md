@@ -214,6 +214,11 @@ The visual elements requested by the stakeholder were written into UI unit tests
 #### Back-End Server
 ![Sprint 2 Backend TDD](img/backend_tests.png "Sprint 2 Backend TDD")
 
+### Sprint 2 CI - Travis
+We setup Travis CI to automatically test our code as commits are pushed to github
+![Sprint 2 CI Github](img/github_tests.png "Sprint 2 CI Github")
+![Sprint 2 CI](img/travis_tests.png "Sprint 2 CI")
+
 ### Sprint 2 Evidence of Running Program
 
 The front-end angular.io component demonstrating the counties of Brazil with 0 cases of Malaria.
