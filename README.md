@@ -219,6 +219,11 @@ We setup Travis CI to automatically test our code as commits are pushed to githu
 ![Sprint 2 CI Github](img/github_tests.png "Sprint 2 CI Github")
 ![Sprint 2 CI](img/travis_tests.png "Sprint 2 CI")
 
+### Sprint 2 CD - Heroku
+We setup Heroku automatically deploy our app whenever new commits are pushed to the master branch and all tests pass the CI (Travis)
+![Sprint 2 CD Setup](img/heroku_setup.png "Sprint 2 Heroku Setup")
+![Sprint 2 CD Deployments](img/heroku_deployments.png "Sprint 2 Heroku Deployments")
+
 ### Sprint 2 Evidence of Running Program
 
 The front-end angular.io component demonstrating the counties of Brazil with 0 cases of Malaria.
