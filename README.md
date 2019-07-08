@@ -251,5 +251,16 @@ Zoom MeetingScreenshot:
 
 
 ### Sprint 2 Sprint Review
-????
+The development team, the product owner, and our stakeholder Marcia had a zoom conference and demonstrated the product. We received and noted our stakeholder's feedback and will take into consideration in the next sprint.
+The following is the feedback from our stakeholder:
+
+- Add year + month
+- Quartiles (25, 50, 75, 100) divided in colors: 
+  - top 2 shades of red (or 4 shades of red)
+  - bottom 2 shades of blue
+- Move legend to left hand side
+- Title: Brazil by municipality instead of county: (Maranhao + tocantins) leave out for now.
+- Add boundary of country and states
+
+![Sprint 2 Review](img/Sprint2_review_zoom.png "Sprint 2 Review") 
 
