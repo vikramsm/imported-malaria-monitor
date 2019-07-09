@@ -1,16 +1,1 @@
-body {
-    min-width: 60em;
-}
-
-.info-section {
-  display: flex;
-  flex-direction: column;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  margin: 20px;
-}
-
-.info-item {
-  margin-right: auto;
-  min-width: 15em;
-}
+/* Done use this, put style in styles.css */

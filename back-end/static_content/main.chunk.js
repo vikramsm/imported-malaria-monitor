@@ -41,7 +41,7 @@ module.exports = "<h1>{{title}}</h1>\n<app-map></app-map>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Brazil By County</h2>\n<div class=\"info-section\">\n<div class=\"h3 info-item\" id=\"cases-total-found\">Total Cases Shown: {{number_cases}}</div>\n  <div class=\"month-filter-option\" class=\"info-item\">\n  <label for=\"month-filter\">Month: </label>\n   <select id=\"month-filter\" type=\"month\" name=\"month-filter\">\n     <option *ngFor = \"let i of months\">{{i}}</option>\n   </select>\n  </div>\n  <div class=\"case-filter-option\" class=\"info-item\">\n  <label for=\"case-filter\">Imported Cases: </label>\n   <select id=\"case-filter\" name=\"case-filter\">\n     <option *ngFor = \"let i of cases\">{{i}}</option>\n   </select>\n   </div>\n  <div id=\"legend\" class=\"info-item\">\n    Legend:\n  </div>\n</div>\n<div id=\"map\"></div>\n\n<div>{{trimmedJson}}</div>\n"
+module.exports = "<h2>Brazil By County</h2>\n<div class=\"info-section\">\n<div class=\"h3 info-item\" id=\"cases-total-found\">Total Cases Shown: {{number_cases}}</div>\n  <div class=\"month-filter-option\" class=\"info-item\">\n  <label for=\"month-filter\">Month: </label>\n   <select id=\"month-filter\" type=\"month\" name=\"month-filter\">\n     <option *ngFor = \"let i of months\">{{i}}</option>\n   </select>\n  </div>\n  <div class=\"case-filter-option\" class=\"info-item\">\n  <label for=\"case-filter\">Imported Cases: </label>\n   <select id=\"case-filter\" name=\"case-filter\">\n     <option *ngFor = \"let i of cases\">{{i}}</option>\n   </select>\n  </div>\n</div>\n<div id=\"map\"></div>\n\n<div>{{trimmedJson}}</div>\n"
 
 /***/ }),
 
@@ -182,7 +182,7 @@ BackendService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body {\n    min-width: 60em;\n}\n\n.info-section {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n          flex-direction: column;\n  flex-flow: row wrap;\n  -webkit-box-pack: start;\n          justify-content: flex-start;\n  margin: 20px;\n}\n\n.info-item {\n  margin-right: auto;\n  min-width: 15em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFwL21hcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtFQUNFLG9CQUFhO0VBQWIsYUFBYTtFQUNiLDRCQUFzQjtFQUF0Qiw2QkFBc0I7VUFBdEIsc0JBQXNCO0VBQ3RCLG1CQUFtQjtFQUNuQix1QkFBMkI7VUFBM0IsMkJBQTJCO0VBQzNCLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixlQUFlO0FBQ2pCIiwiZmlsZSI6InNyYy9hcHAvbWFwL21hcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gICAgbWluLXdpZHRoOiA2MGVtO1xufVxuXG4uaW5mby1zZWN0aW9uIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgZmxleC1mbG93OiByb3cgd3JhcDtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LXN0YXJ0O1xuICBtYXJnaW46IDIwcHg7XG59XG5cbi5pbmZvLWl0ZW0ge1xuICBtYXJnaW4tcmlnaHQ6IGF1dG87XG4gIG1pbi13aWR0aDogMTVlbTtcbn1cbiJdfQ== */"
+module.exports = "/* Done use this, put style in styles.css */\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFwL21hcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDJDQUEyQyIsImZpbGUiOiJzcmMvYXBwL21hcC9tYXAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIERvbmUgdXNlIHRoaXMsIHB1dCBzdHlsZSBpbiBzdHlsZXMuY3NzICovXG4iXX0= */"
 
 /***/ }),
 
@@ -206,28 +206,54 @@ __webpack_require__.r(__webpack_exports__);
 
 //import { HttpClientModule } from  '@angular/common/http'
 
-let map;
 let MapComponent = class MapComponent {
     constructor(service) {
         this.service = service;
         this.number_cases = 0;
         this.trimmedJson = '';
+        this.errormessage = '';
         this.months = ["January", "Feburary", "March", "April", "May",
             "June", "July", "August", "September",
             "October", "November", "December"];
-        this.cases = ["Total",
-            "from same municipality",
-            "imported from other municipality",
-            "imported from other state",
-            "imported from other country"];
+        this.cases = ["All Cases",
+            "From same municipality",
+            "Imported from other municipality",
+            "Imported from other state",
+            "Imported from other country"];
         this.legendrows = [{ "0 cases": "cases-0" },
             { "10 > cases": "cases-to-10" },
             { "50 > cases": "cases-to-50" },
             { "100 > cases": "cases-to-100" },
             { "500 > cases": "cases-to-100" },
             { "1000 > cases": "cases-to-100" }];
+        //rehttps://leafletjs.com/examples/choropleth/
+        this.getColor = (d) => {
+            // TODO: temp random
+            if (d == null)
+                d = Math.floor(Math.random() * 4);
+            return d === 1 ? '#fef0d9' :
+                d === 2 ? '#fdcc8a' :
+                    d === 3 ? '#fc8d59' :
+                        '#d7301f'; //d ===4
+        };
+        this.style = (feature) => {
+            return {
+                fillColor: this.getColor(feature.properties.density),
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 0.7
+            };
+        };
+        this.getBackupGeoJson = () => {
+            this.service.getBackupGeoJson()
+                .toPromise()
+                .then(response => { this.makeMap(response); });
+        };
         this.getMap = () => {
-            return map;
+            return this.map;
+        };
+        this.handleError = (err) => {
+            this.errormessage = "Cound not retrieve map data";
         };
     }
     ngOnInit() {
@@ -236,33 +262,45 @@ let MapComponent = class MapComponent {
             .then(response => { this.makeMap(response); })
             .catch((error) => { this.getBackupGeoJson(); });
     }
-    getBackupGeoJson() {
-        this.service.getBackupGeoJson()
-            .toPromise()
-            .then(response => { this.makeMap(response); });
-    }
-    ;
     makeMap(geoJson) {
         // if refreshing map, remove the old one
-        if (map) {
-            map.off();
-            map.remove();
+        if (this.map && this.map.off) {
+            this.map.off();
+            this.map.remove();
         }
         // start with a view in the middle of Brazil, zoom level 6
-        map = leaflet__WEBPACK_IMPORTED_MODULE_1__["map"]('map', { minZoom: 5 }).setView([-5.00, -59.00], 6);
+        this.map = leaflet__WEBPACK_IMPORTED_MODULE_1__["map"]('map', { minZoom: 4 }).setView([-7.50, -59.00], 5);
+        let legend = leaflet__WEBPACK_IMPORTED_MODULE_1__["control"]({ position: 'bottomright' });
+        let self = this;
+        this.map.attributionControl.addAttribution('Imported Malaria');
+        legend.onAdd = (map) => {
+            var div = leaflet__WEBPACK_IMPORTED_MODULE_1__["DomUtil"].create('div', 'info legend'), grades = [0, 25, 50, 75, 100], labels = [];
+            for (var i = 0; i < grades.length - 1; i++) {
+                div.innerHTML +=
+                    '<i style="background:' + self.getColor(i + 1) + '"></i> ' +
+                        grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+            }
+            return div;
+        };
+        legend.addTo(this.map);
         // Add the goemap and test adding data to the item
-        leaflet__WEBPACK_IMPORTED_MODULE_1__["geoJSON"](geoJson, {
+        this.map = leaflet__WEBPACK_IMPORTED_MODULE_1__["geoJSON"](geoJson, {
+            style: this.style,
             onEachFeature: function (feature, layer) {
                 let p = feature.properties;
                 let name = p.NAME_3;
+                let density = Math.floor(Math.random() * 4); //TODO: just random number fo now
                 let fullName = `${p.NAME_2},${p.NAME_1},${p.NAME_0}`;
-                layer.bindPopup('<h1>' + name + '</h1><p>' + fullName + '</p>');
+                layer.bindPopup(`<h1>${name}</h1><div class="popup">${fullName}</div><div <div class="popup">Cases (TODO) ${density}</div>`);
             }
-        }).addTo(map);
-    }
-    handleError(err) {
-        //this.errormessage = "Cound not retrieve map data";
-    }
+        }).addTo(this.map);
+        this.map = leaflet__WEBPACK_IMPORTED_MODULE_1__["tileLayer"]('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.outdoors',
+            accessToken: 'pk.eyJ1Ijoia2RvbGFuIiwiYSI6ImNqeHYzZnRmZjAwdHAzY283azFkdTFzYmsifQ.K-2XaOWsVjN5uIzKAUfLBg'
+        }).addTo(this.map);
+    } // end getMap
 };
 MapComponent.ctorParameters = () => [
     { type: _backend_backend_service__WEBPACK_IMPORTED_MODULE_3__["BackendService"] }
