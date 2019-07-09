@@ -1,6 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+//import { MapComponent } from './map/map.component';
+
 
 describe('AppComponent', () => {
 
@@ -9,7 +11,8 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, 
+        MapComponent
       ],
       schemas: [
        CUSTOM_ELEMENTS_SCHEMA
@@ -36,3 +39,10 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1').textContent).toContain(title);
   });
 });
+/*
+onMapReady(map: Map): void {
+    setTimeout(() => {
+      map.invalidateSize();
+    });
+}
+*/

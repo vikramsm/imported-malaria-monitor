@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>{{title}}</h1>\n<app-map></app-map>\n"
+module.exports = "<h1>{{title}}</h1>\n\n<mat-tab-group>\n  \t\t\n  \t\t<mat-tab label=\"Map\">\n  \t\t\t<app-map>\n\t\t\t\t<div \n\t\t\t\t\tleaflet \n\t\t\t\t\t(leafletMapReady) = \"onMapReady($event)\"> \n\t\t\t\t</div>\n\t\t\t</app-map>\n\t\t</mat-tab>\n\t\t<mat-tab label=\"One\">\n    \t\t<h1>Some tab content</h1>\n    \t\t<p>...</p>\n  \t\t</mat-tab>\n  \t\t<mat-tab label=\"Two\">\n    \t\t<h1>Some more tab content</h1>\n    \t\t<p>...</p>\n  \t\t</mat-tab>\n</mat-tab-group>\n"
 
 /***/ }),
 
@@ -85,6 +85,12 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     })
 ], AppComponent);
 
+/*
+onMapReady(map: Map): void {
+    setTimeout(() => {
+      map.invalidateSize();
+    });
+}*/
 
 
 /***/ }),
@@ -106,6 +112,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _map_map_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./map/map.component */ "./src/app/map/map.component.ts");
 /* harmony import */ var _backend_backend_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./backend/backend.service */ "./src/app/backend/backend.service.ts");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/tabs */ "./node_modules/@angular/material/esm2015/tabs.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+
+
 
 
 
@@ -119,7 +129,9 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClientModule"]
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClientModule"],
+            _angular_material_tabs__WEBPACK_IMPORTED_MODULE_7__["MatTabsModule"],
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_8__["BrowserAnimationsModule"]
         ],
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
@@ -379,7 +391,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/kdolan/Projects/CSCIS-71-Agile/merge-IMM-repos/imported-malaria-monitor/back-end/front-end-angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/fekim/Desktop/imported-malaria-monitor/back-end/front-end-angular/src/main.ts */"./src/main.ts");
 
 
 /***/ })

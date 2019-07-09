@@ -6,10 +6,16 @@ import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { BackendService } from './backend/backend.service';
 
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule, 
+    MatTabsModule, 
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
