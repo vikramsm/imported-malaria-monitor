@@ -18,7 +18,8 @@ class APITestCase(TestCase):
         self.assertTrue(response.json())
 
     def testGetMapExpectedResponse(self):
-        response = self.client.get(self.URL, format='json')
+        url = "http://localhost:8000/api/getmap/?municipality=Acrelândia&country=Brazil&caseType=sameMuni&yearMonth=2019-01"
+        response = self.client.get(url, format='json')
         data = response.json()
 
         self.assertEqual(data['Country'], "Brazil")
