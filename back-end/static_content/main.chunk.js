@@ -269,10 +269,10 @@ let MapComponent = class MapComponent {
             this.map.remove();
         }
         // start with a view in the middle of Brazil, zoom level 6
-        this.map = leaflet__WEBPACK_IMPORTED_MODULE_1__["map"]('map', { minZoom: 5 }).setView([-5.00, -59.00], 6);
+        this.map = leaflet__WEBPACK_IMPORTED_MODULE_1__["map"]('map', { minZoom: 4 }).setView([-7.50, -59.00], 5);
         let legend = leaflet__WEBPACK_IMPORTED_MODULE_1__["control"]({ position: 'bottomright' });
         let self = this;
-        this.map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+        this.map.attributionControl.addAttribution('Imported Malaria');
         legend.onAdd = (map) => {
             var div = leaflet__WEBPACK_IMPORTED_MODULE_1__["DomUtil"].create('div', 'info legend'), grades = [0, 25, 50, 75, 100], labels = [];
             for (var i = 0; i < grades.length - 1; i++) {

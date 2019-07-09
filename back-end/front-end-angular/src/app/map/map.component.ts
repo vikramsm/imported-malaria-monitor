@@ -77,11 +77,11 @@ export class MapComponent implements OnInit {
     }
 
     // start with a view in the middle of Brazil, zoom level 6
-    this.map = leaflet.map('map', {minZoom: 5}).setView([-5.00, -59.00], 6);
+    this.map = leaflet.map('map', {minZoom: 4}).setView([-7.50, -59.00], 5);
 
     let legend = leaflet.control({position: 'bottomright'});
     let self = this;
-    this.map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+    this.map.attributionControl.addAttribution('Imported Malaria');
     legend.onAdd = (map) => {
         var div = leaflet.DomUtil.create('div', 'info legend'),
             grades = [0, 25, 50, 75, 100],
