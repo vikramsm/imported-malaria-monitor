@@ -3,19 +3,23 @@ from django.shortcuts import render
 
 from .models import MalariaCase
 
+
 # Create your views here.
 
 def home(request):
-   return render(request, "map/home.html")
+    return render(request, "map/home.html")
+
 
 def index(request):
     return render(request, "map/index.html")
 
+
 def databaseIndex(request):
     context = {
-        "malariaCases" : MalariaCase.objects.all()
+        "malariaCases": MalariaCase.objects.all()
     }
     return render(request, "map/databaseindex.html", context)
+
 
 def malariaCase(request, case_id):
     try:
@@ -26,4 +30,4 @@ def malariaCase(request, case_id):
         "case": case,
         "patients": case.patients.all()
     }
-    return render (request, "map/malariacase.html", context)
+    return render(request, "map/malariacase.html", context)
