@@ -3,6 +3,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.home),
-    path("getmap", views.getMap),
+    path("", views.api),
+    path("/getmap/", views.getMap, name="getmap")
 ]
