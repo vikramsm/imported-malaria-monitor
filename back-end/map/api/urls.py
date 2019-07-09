@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path("", views.api),
-    path("/getmap/", views.getMap, name="getmap")
+    path("getmap/", views.getMap, name="getmap")
 ]

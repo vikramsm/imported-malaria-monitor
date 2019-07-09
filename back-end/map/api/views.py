@@ -1,4 +1,5 @@
 from django.http import HttpResponse, Http404
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -9,5 +10,12 @@ def api(request):
 
 def getMap(request):
     message = request.GET.get('message')
-    print(message)
-    return HttpResponse("Get MAP")
+
+    properties = {
+        "Country": "Brazil",
+        "State": "Acre",
+        "Municipality": "Acrelândia",
+        "count": 23
+    }
+
+    return JsonResponse(properties)
