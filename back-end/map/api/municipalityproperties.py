@@ -26,8 +26,8 @@ class MunicipalityProperty:
         if caseType == CaseType.otherCountry: count = self.otherCountry
 
         properties = {
-            "Country": "Brazil",
-            "State": "Acre",
+            "Country": "BRASIL",
+            "State": "AMAZONAS",
             "Municipality": self.name,
             "count": count
         }
