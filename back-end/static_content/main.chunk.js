@@ -148,20 +148,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 
 
 
+
+const backendMalariaDataUrl = "api/getmap/";
+const backendGeoMapUrl = 'api/geojson/brazil';
+const geoJsonUrl = 'static/BRA_adm3_NorthWest.json';
+const malariaJsonTestData = {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "Acrelândia",
+    "count": 23
+};
 let BackendService = class BackendService {
     constructor(http) {
         this.http = http;
-        this.backendUrl = 'localhost:8080/geojson/brazil';
-        this.geoJsonJUrl = 'static/BRA_adm3_NorthWest.json';
     }
     getGeoJson() {
-        return this.http.get(this.backendUrl);
+        return this.http.get(backendGeoMapUrl);
     }
     getBackupGeoJson() {
-        return this.http.get(this.geoJsonJUrl);
+        return this.http.get(geoJsonUrl);
+    }
+    getMalariaData() {
+        return this.http.get(backendMalariaDataUrl);
+    }
+    getBackupMalariaData() {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(`data:[${malariaJsonTestData}]`);
     }
 };
 BackendService.ctorParameters = () => [

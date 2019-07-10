@@ -1,7 +1,6 @@
 declare var require: any
 import * as leaflet from 'leaflet';
 import { Component, OnInit } from '@angular/core';
-//import { HttpClientModule } from  '@angular/common/http'
 import { BackendService } from '../backend/backend.service';
 
 @Component({
@@ -11,10 +10,12 @@ import { BackendService } from '../backend/backend.service';
   providers: [BackendService]
 })
 export class MapComponent implements OnInit {
-  map;
+  map = null;
+  location;
   number_cases = 0;
   trimmedJson = '';
   errormessage = '';
+  mapboxRegisteredDns = "imported-malaria-monitor.herokuapp.com";
   months = ["January", "Feburary", "March", "April", "May",
            "June", "July", "August", "September",
            "October", "November", "December"];
@@ -32,14 +33,21 @@ export class MapComponent implements OnInit {
             {"500 > cases": "cases-to-100"},
             {"1000 > cases": "cases-to-100"}];
 
-  constructor(private service: BackendService) {}
-
-  ngOnInit() {
-    this.service.getGeoJson()
-          .toPromise()
-          .then(response => {this.makeMap(response)})
-          .catch((error:any) => {this.getBackupGeoJson()});
+  constructor(private service: BackendService) {
+    console.log("In constructor")
   }
+
+  ngOnInit(){
+    console.log("In ng init");
+    this.location =  window.location.hostname;
+    this.service.getGeoJson()
+       .subscribe(data => {
+             this.makeMap(data);
+             console.log("got data");
+           });
+  console.log("end of ng init");
+ }
+
   //rehttps://leafletjs.com/examples/choropleth/
    getColor = (d) => {
      // TODO: temp random
@@ -59,26 +67,25 @@ export class MapComponent implements OnInit {
       };
   };
 
-  getBackupGeoJson = () => {
-      this.service.getBackupGeoJson()
-      .toPromise()
-      .then(response => {this.makeMap(response)})
-  };
-
   getMap = () => {
+    console.log(`KAREN getting this map`);
+    console.log(`KAREN getting this map: ${this.map.getMinZoom()}`);
     return this.map;
   };
 
-  makeMap(geoJson) {
+  makeMap = (geoJson) => {
+    console.log(`KAREN making this map`);
+    const geoString = JSON.stringify(geoJson);
+    console.log(`geoJson is ${geoString}`);
+
     // if refreshing map, remove the old one
-    if (this.map && this.map.off) {
+    if (this.map) {
       this.map.off();
       this.map.remove();
     }
 
-    // start with a view in the middle of Brazil, zoom level 6
+    // start with a view in the middle of Brazil and set zoom and min zoom
     this.map = leaflet.map('map', {minZoom: 4}).setView([-7.50, -59.00], 5);
-
     let legend = leaflet.control({position: 'bottomright'});
     let self = this;
     this.map.attributionControl.addAttribution('Imported Malaria');
@@ -96,27 +103,34 @@ export class MapComponent implements OnInit {
     legend.addTo(this.map);
 
     // Add the goemap and test adding data to the item
-    this.map = leaflet.geoJSON(geoJson, {
+    leaflet.geoJSON(geoJson, {
       style: this.style,
       onEachFeature: function (feature, layer) {
         let p = feature.properties;
         let name = p.NAME_3;
         let density = Math.floor(Math.random() * 4); //TODO: just random number fo now
         let fullName = `${p.NAME_2},${p.NAME_1},${p.NAME_0}`;
+        console.log(`feature props ${fullName}`);
         layer.bindPopup(`<h1>${name}</h1><div class="popup">${fullName}</div><div <div class="popup">Cases (TODO) ${density}</div>`);
       }
     }).addTo(this.map);
 
-    this.map = leaflet.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
-      id: 'mapbox.outdoors',
-      accessToken: 'pk.eyJ1Ijoia2RvbGFuIiwiYSI6ImNqeHYzZnRmZjAwdHAzY283azFkdTFzYmsifQ.K-2XaOWsVjN5uIzKAUfLBg'
-    }).addTo(this.map);
-
+    // this only works on the heroku DNS, so don't bother with https403s anywhere else
+    if (this.location.url && this.location.url.includes(this.mapboxRegisteredDns)) {
+      console.log("getting tiles");
+      leaflet.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox.outdoors',
+        accessToken: 'pk.eyJ1Ijoia2RvbGFuIiwiYSI6ImNqeHYzZnRmZjAwdHAzY283azFkdTFzYmsifQ.K-2XaOWsVjN5uIzKAUfLBg'
+      }).addTo(this.map);
+    }
+    console.log("after tiles");
+    console.log(`done map, zoom is  ${this.map.getMinZoom()}`);
   } // end getMap
 
   handleError = (err) => {
+    console.log("error ${err}");
     this.errormessage = "Cound not retrieve map data";
   }
 }

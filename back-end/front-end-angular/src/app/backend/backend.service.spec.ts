@@ -2,6 +2,13 @@ import { HttpClientTestingModule, HttpTestingController, TestRequest } from '@an
 import { TestBed } from '@angular/core/testing';
 import { BackendService } from './backend.service';
 
+const malariaJsonTestData = {
+  "Country": "Brazil",
+  "State": "Acre",
+  "Municipality": "Acrelândia",
+  "count": 23
+};
+
 describe('BackendService', () => {
   let backendService: BackendService;
   let httpController: HttpTestingController;
@@ -19,26 +26,28 @@ describe('BackendService', () => {
     expect(backendService).toBeTruthy();
   });
 
-  it('should call the getGeoJson service at \"localhost:8080/geojson/brazil\"', async () => {
-    backendService.getGeoJson().subscribe(data => {});
-    const call: TestRequest =
-      httpController.expectOne(`localhost:8080/geojson/brazil`);
+  it('should call the getMalariaJson service at \"api/getmap/\"', async () => {
+    backendService.getMalariaJson().subscribe(data => {});
+    const req = httpController.expectOne(`api/getmap/`);
      httpController.verify();
-     // the empty expect used to acknowledge the verify text above
-     expect().nothing();
+     expect(req.request.method).toEqual('GET');
   });
 
-  it('should call getBackupGeoJson service at \"static/BRA_adm3_NorthWest\"', async () => {
-    backendService.getBackupGeoJson().subscribe(data => {});
-    const call: TestRequest =
-      httpController.expectOne(`static/BRA_adm3_NorthWest.json`);
+  it('should call getGeoJson service at \"static/BRA_adm3_NorthWest\"', async () => {
+    backendService.getGeoJson().subscribe(data => {});
+    const req = httpController.expectOne(`static/BRA_adm3_NorthWest.json`);
     httpController.verify();
-    // the empty expect used to acknowledge the verify text above
-    expect().nothing();
+    expect(req.request.method).toEqual('GET');
+  });
+
+  it('should get data from getBackupMalariaJson service', async () => {
+    backendService.getBackupMalariaJson().subscribe(data => {});
+    const req = httpController.expectOne(req => req.url.includes('static'));
+    expect(req.request.method).toEqual('GET');
   });
 
   it('should return a resonse type of json', async () => {
-    backendService.getBackupGeoJson().subscribe();
+    backendService.getGeoJson().subscribe();
     const req = httpController.expectOne(req => req.url.includes('static'));
     expect(req.request.responseType == 'json').toBeTruthy();
     req.flush({});

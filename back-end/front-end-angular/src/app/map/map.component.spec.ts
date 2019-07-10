@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MapComponent } from './map.component';
-//import { HttpClient } from '@angular/common/http';
 import { BackendService } from '../backend/backend.service';
 import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
@@ -41,12 +40,12 @@ describe('MapComponent', () => {
   });
 
   it('should have a map object with a zoom level', async (done) => {
-    expect(component.getMap().getZoom()).toEqual(6);
+    expect(component.getMap().getZoom()).toEqual(5);
     done();
   });
 
   it('should have a minimum zoom level', async (done) => {
-    expect(component.getMap().getMinZoom()).toEqual(5);
+    expect(component.getMap().getMinZoom()).toEqual(4);
     done();
   });
 
@@ -68,11 +67,6 @@ describe('MapComponent', () => {
 
   it('should have a cases type UI element', () => {
     const de = fixture.debugElement.query(By.css('#case-filter'));
-    expect(de.nativeElement).toBeTruthy();
-  });
-
-  it('should have a legend UI element', () => {
-    const de = fixture.debugElement.query(By.css('#legend'));
     expect(de.nativeElement).toBeTruthy();
   });
 
