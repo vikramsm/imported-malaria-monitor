@@ -116,9 +116,3 @@ class ModelsTestCase(TestCase):
         allCases = MalariaCase.objects.all()
         self.assertEqual(len(allCases), 4)
 
-    def test_homepage_load(self):
-        response = self.client.get('/')
-        self.assertEqual(response.status_code, 200)
-
-
-
