@@ -34,7 +34,6 @@ class MunicipalityProperty:
 
         return properties
 
-
 # Array containing all municipalities in Amazonas and their counts for each type of case
 MUNICIPALITIES_AMAZONAS = [MunicipalityProperty("ALVARÃES", 43, 69, 57, 95),
                            MunicipalityProperty("AMATURÁ", 71, 32, 48, 58),

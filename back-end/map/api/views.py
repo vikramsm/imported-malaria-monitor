@@ -1,6 +1,8 @@
 from django.http import HttpResponse, Http404
 from django.http import JsonResponse
+import json
 
+from .municipalityproperties import MUNICIPALITIES_AMAZONAS, CaseType
 
 # Create your views here.
 
@@ -9,13 +11,12 @@ def api(request):
 
 
 def getMap(request):
-    message = request.GET.get('message')
+    caseTypeStr = request.GET.get('casetype')
+    responseArray = []
 
-    properties = {
-        "Country": "Brazil",
-        "State": "Acre",
-        "Municipality": "Acrelândia",
-        "count": 23
-    }
+    for municipality in MUNICIPALITIES_AMAZONAS:
+        responseArray.append(municipality.getProperties(CaseType.sameMuni))
 
-    return JsonResponse(properties)
+    jsonResp = json.dumps(responseArray)
+
+    return HttpResponse(jsonResp, content_type="application/json")

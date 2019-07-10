@@ -22,7 +22,7 @@ class APITestCase(TestCase):
     def testGetMapArrayResponse(self):
         response = self.client.get(self.URL, format='json')
         data = response.json()
-        # self.assertEqual(len(data), 50)
+        self.assertEqual(len(data), 62)
 
     #Unit Tests for BDD testGetMapArrayResponse
     def testCaseTypeExists(self):
@@ -79,4 +79,18 @@ class APITestCase(TestCase):
 
     def testNumMunicipalitiesInAmazonas(self):
         self.assertEqual(len(MUNICIPALITIES_AMAZONAS), 62)
+
+    def testMaxValueMunicipalityCounts(self):
+        for property in MUNICIPALITIES_AMAZONAS:
+            self.assertTrue(property.sameMuni <= 100)
+            self.assertTrue(property.otherMuni <= 100)
+            self.assertTrue(property.otherState <= 100)
+            self.assertTrue(property.otherCountry <= 100)
+
+    def testMinValueMunicipalityCounts(self):
+        for property in MUNICIPALITIES_AMAZONAS:
+            self.assertTrue(property.sameMuni >=0)
+            self.assertTrue(property.otherMuni >= 0)
+            self.assertTrue(property.otherState >= 0)
+            self.assertTrue(property.otherCountry >=0)
 
