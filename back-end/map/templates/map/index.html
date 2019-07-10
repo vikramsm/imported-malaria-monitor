@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="height:100%">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+
+        <style>
+         .footer {
+             position: fixed;
+             left: 0;
+             bottom: 0;
+             width: 100%;
+             height: auto;
+             background-color:black;
+             color: white;
+             text-align: center;
+         }
+        </style>
+
+    </head>
+
+    <!--<body class="bg-secondary">-->
+    <body bgcolor="#E6E6FA">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand"  href="{% url 'map' %}"><p style="color:#FFC300; font-weight: 900;">MalariaMonitor</p></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'map' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'map' %}">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'map' %}">Contact Form</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'map' %}">Directions</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Disease Mapping & Analytics
+                        </a>
+
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'map' %}">View Malaria Maps</a>
+
+                            <a class="dropdown-item" href="">View All Disease Maps (future release)</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="">View Localized Disease Data(future release) </a>
+                        </div>
+
+                    </li>
+
+
+                    <a class="nav-link" href="">login (future release)</a>
+        </li>
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <body class="bg" style="background-image: url('{% static 'global_malaria.gif' %}')";>
+
+        <div class="footer">
+            <!-- <p>CSCIS-71 Agile Software Development - Team Malaria Monitor&copy; Summer 2019</p> -->
+        </div>
+    </body>
+</html>
