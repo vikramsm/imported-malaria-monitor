@@ -66,6 +66,11 @@ describe('MapComponent', () => {
     expect(de.nativeElement).toBeTruthy();
   });
 
+  it('should have a year UI element', () => {
+    const de = fixture.debugElement.query(By.css('#year-filter'));
+    expect(de.nativeElement).toBeTruthy();
+  });
+
   it('should have a cases type UI element', () => {
     const de = fixture.debugElement.query(By.css('#case-filter'));
     expect(de.nativeElement).toBeTruthy();

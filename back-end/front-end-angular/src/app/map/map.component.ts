@@ -12,12 +12,20 @@ import { BackendService } from '../backend/backend.service';
 })
 export class MapComponent implements OnInit {
   map;
+  //model;
   number_cases = 0;
   trimmedJson = '';
   errormessage = '';
   months = ["January", "Feburary", "March", "April", "May",
            "June", "July", "August", "September",
            "October", "November", "December"];
+
+  
+  //days: int[] = [];
+  //days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, //28, 29, 30, 31];
+
+
+  years = [2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000];
 
   cases = ["All Cases",
            "From same municipality",
@@ -32,13 +40,18 @@ export class MapComponent implements OnInit {
             {"500 > cases": "cases-to-100"},
             {"1000 > cases": "cases-to-100"}];
 
-  constructor(private service: BackendService) {}
+  constructor(private service: BackendService) {
+
+  }
 
   ngOnInit() {
+
     this.service.getGeoJson()
           .toPromise()
           .then(response => {this.makeMap(response)})
           .catch((error:any) => {this.getBackupGeoJson()});
+   
+          
   }
   //rehttps://leafletjs.com/examples/choropleth/
    getColor = (d) => {
@@ -69,12 +82,15 @@ export class MapComponent implements OnInit {
     return this.map;
   };
 
+
   makeMap(geoJson) {
     // if refreshing map, remove the old one
     if (this.map && this.map.off) {
       this.map.off();
       this.map.remove();
+
     }
+    
 
     // start with a view in the middle of Brazil, zoom level 6
     this.map = leaflet.map('map', {minZoom: 4}).setView([-7.50, -59.00], 5);
