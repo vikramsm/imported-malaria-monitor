@@ -24,6 +24,34 @@ class APITestCase(TestCase):
         data = response.json()
         self.assertEqual(len(data), 62)
 
+    #BDD Test
+    def testGetMapResponseOtherMuni(self):
+        url = "http://localhost:8000/api/getmap/?caseType=otherMuni&yearMonth=2019-01"
+        response = self.client.get(url, format='json')
+        data = response.json()
+        self.assertEqual(len(data), 62)
+
+    #BDD Test
+    def testGetMapResponseOtherState(self):
+        url = "http://localhost:8000/api/getmap/?caseType=otherState&yearMonth=2019-01"
+        response = self.client.get(url, format='json')
+        data = response.json()
+        self.assertEqual(len(data), 62)
+
+    #BDD Test
+    def testGetMapResponseOtherCountry(self):
+        url = "http://localhost:8000/api/getmap/?caseType=otherCountry&yearMonth=2019-01"
+        response = self.client.get(url, format='json')
+        data = response.json()
+        self.assertEqual(len(data), 62)
+
+    #BDD Test
+    def testGetMapResponseInvalidCase(self):
+        url = "http://localhost:8000/api/getmap/?caseType=Invalid&yearMonth=2019-01"
+        response = self.client.get(url, format='json')
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+
     #Unit Tests for BDD testGetMapArrayResponse
     def testCaseTypeExists(self):
         self.assertTrue(CaseType.sameMuni)
@@ -93,31 +121,3 @@ class APITestCase(TestCase):
             self.assertTrue(property.otherMuni >= 0)
             self.assertTrue(property.otherState >= 0)
             self.assertTrue(property.otherCountry >=0)
-
-    #BDD Test
-    def testGetMapResponseOtherMuni(self):
-        url = "http://localhost:8000/api/getmap/?caseType=otherMuni&yearMonth=2019-01"
-        response = self.client.get(url, format='json')
-        data = response.json()
-        self.assertEqual(len(data), 62)
-
-    #BDD Test
-    def testGetMapResponseOtherState(self):
-        url = "http://localhost:8000/api/getmap/?caseType=otherState&yearMonth=2019-01"
-        response = self.client.get(url, format='json')
-        data = response.json()
-        self.assertEqual(len(data), 62)
-
-    #BDD Test
-    def testGetMapResponseOtherCountry(self):
-        url = "http://localhost:8000/api/getmap/?caseType=otherCountry&yearMonth=2019-01"
-        response = self.client.get(url, format='json')
-        data = response.json()
-        self.assertEqual(len(data), 62)
-
-    #BDD Test
-    def testGetMapResponseInvalidCase(self):
-        url = "http://localhost:8000/api/getmap/?caseType=Invalid&yearMonth=2019-01"
-        response = self.client.get(url, format='json')
-        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
-
