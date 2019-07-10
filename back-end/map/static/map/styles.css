@@ -5,3 +5,7 @@ h1 {
     margin-bottom: 1px;
     color: blue;
 }
+
+navbar-brand {
+    margin-top: 10px;
+}

@@ -31,28 +31,13 @@
     <body bgcolor="#E6E6FA">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand"  href="{% url 'map' %}"><p style="color:#FFC300; font-weight: 900;">MalariaMonitor</p></a>
+            <a class="navbar-brand"  href="{% url 'map' %}"><p style="color:#FFC300; font-weight: 900 ;margin-top: 10px;">Imported Malaria Monitor</p></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'map' %}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'map' %}">About Us</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'map' %}">Contact Form</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'map' %}">Directions</a>
-                    </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Disease Mapping & Analytics
@@ -78,10 +63,15 @@
             </div>
         </nav>
 
-        <body class="bg" style="background-image: url('{% static 'global_malaria.gif' %}')";>
+        <!-- <class="bg" style="background-image: url('{% static 'global_malaria.gif' %}')"; -->
 
-        <div class="footer">
-            <!-- <p>CSCIS-71 Agile Software Development - Team Malaria Monitor&copy; Summer 2019</p> -->
-        </div>
-    </body>
+        <body class="bg" style="background-image: url('{% static 'global_malaria.gif' %}');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;">
+        </body>
+
+            <div class="footer">
+                <p>Image credits: www.nasa.gov</p>
+            </div>
 </html>
