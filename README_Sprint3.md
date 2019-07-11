@@ -1,4 +1,4 @@
-## SPRINT 3 (Due July 11th, 3 pm)
+## SPRINT 3 (Ended July 11th, 3 pm)
 
 ### Forecast Velocity
 Our velocity forecast is of 8 Story Points for Sprint 3. Our forecast is based on Yesterday's weather since our velocity for Sprint 2 was also 8 story points.
@@ -39,12 +39,14 @@ The second impediment we faced was due to the supported database software in her
 ![Sprint 3 pair programming](img/sprint3_pairProg.jpeg "Sprint 3 pair prog")
 
 ### Sprint 3 BDD/TDD
+
 The BDD and TDD tests are in api/test.py file
 ![Sprint 3 BDD](img/bdd_tdd.png "Sprint 3 BDD")
 
 #### Front-End UI Test Driven Design
-On front end front-end-angular directory run "ng test" 
-![Sprint 3 TDD](img/sprint3_UIunittest.png "Sprint 3 UI TDD")
+
+Front end TDD in the front-end-angular directory run "ng test".
+![Sprint 3 TDD units](img/Sprint3_UI_TDD.png "Sprint 3 UI TDD")
 
 #### Back-End Server Tests
 On backend top-level directory run "python3 manage.py test" to run all backend tests.
