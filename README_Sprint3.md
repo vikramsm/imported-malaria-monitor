@@ -46,9 +46,9 @@ The BDD and TDD tests are in api/test.py file
 
 ????????????
 
-#### Back-End Server
-
-????????????
+#### Back-End Server Tests
+On backend top-level directory run "python3 manage.py test" to run all backend tests.
+![Sprint 3 Backend Tests](img/backend_tests_print3.png "Sprint 3 Backend Tests")
 
 ### Sprint 3 CI - Travis
 
