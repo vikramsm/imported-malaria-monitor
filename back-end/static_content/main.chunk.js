@@ -329,6 +329,8 @@ let MapComponent = class MapComponent {
         this.getDensity = (props) => {
             let key = this.makeFeatureNameKey(props);
             let count = this.malariaCountMap[key];
+            if (!count)
+                count = 0;
             console.log(`got density '${count}' for '${key}'`);
             return count;
         };
