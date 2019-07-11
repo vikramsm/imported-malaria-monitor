@@ -64,7 +64,15 @@ We setup Heroku automatically deploy our app whenever new commits are pushed to 
 
 ### Sprint 3 Evidence of Running Program
 
-The front-end angular.io component demonstrating the counties of Brazil with cases of Malaria.
+The web application is deployed to heroku. It has a home page and navigation to the map of Brazil, by municipality, showing cases of malaria by color code. And functional filter options to change the malaria case type.
+
+[Imported Malaria Montior Home Page] (https://imported-malaria-monitor.herokuapp.com/map "IMM")
+
+Landing page: 
+
+![Sprint 3 Running Code](img/sprint3_running_code_1.png "Sprint 3 running front-end")
+
+Malaria Import Map:
 
 ![Sprint 3 Running Code](img/Sprint3_IMMmap.png "Sprint 3 running front-end")
 
@@ -76,16 +84,20 @@ The following is an example from our Wednesday scrum.
 - Derek: Done: Implemented getMap request for all counties and case types using BDD. Doing: Assisting front end integration. Impediments: none
 - Fatma: Done: Got rid of Day drop down and switched month and year. Doing: Assisting on UI navigation. Impediments: Angular.io learning curve
 - Karen: Done: code to merged malaria stats with geoJson layer, Doing: UI select queries to back end. Impediments: learning Angular.io http mocking layer for TDD.
-- Vikram:	Done: 
+- Vikram:	Done: Landing page navigation options. Doing: Integration of landing page with map page. Impediments: none.
 
-Zoom MeetingScreenshot:
+The team met every day after class during Sprint 3, daily stand up, peer-mob programming, and sprint review rehersal.
 
-PLEASE ADD
+![Sprint 3 Scrum and Rehersal](img/sprint3_rehersal.jpeg "Sprint 3 running front-end")
 
 ### Sprint 3 Sprint Review
 The development team, the product owner, and our stakeholder Marcia had a zoom conference and demonstrated the product at 9:30 am on July 11th. We received and noted our stakeholder's feedback and revised our product backlog.
 The following is the feedback from our stakeholder:
 
-NEEDS UPDATE
+* Put municipalities with 0 count of malaria cases in a separate group from the rest. Add the group to the map legend as a separate category.
+* Make the map look better on FireFox from a PC. I looks good in other browsers, but not on that combination. On FF&PC: (1) The borders are not rounded (2) the filter options are missing arrows.
+* Change the month-year filter to a datepicker with date ranges.
+* Add missing Amazonas states. The map is missing state of "Amapa", and possible others.
+* Add a different border color around the states, to differentiate states from the internal municipality boarders.
 
 ![Sprint 3 Review](img/Sprint3_review_zoom.png "Sprint 3 Review") 
