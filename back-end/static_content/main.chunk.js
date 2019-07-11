@@ -373,7 +373,7 @@ let MapComponent = class MapComponent {
                 onEachFeature: function (feature, layer) {
                     let p = feature.properties;
                     let name = p.NAME_3;
-                    let fullName = `${p.NAME_2}, ${p.NAME_1}, ${this.brasilNormalizedName}`;
+                    let fullName = `${p.NAME_2}, ${p.NAME_1}, ${self.brasilNormalizedName}`;
                     let density = self.getDensity(fullName.toUpperCase());
                     console.log(`feature props key ${fullName}  density ${density}`);
                     layer.bindPopup(`<h1>${name}</h1><div class="popup">${fullName}</div><div <div class="popup">Count ${density}</div>`);
