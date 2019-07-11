@@ -103,3 +103,15 @@ The following is the feedback from our stakeholder:
 * Add a different border color around the states, to differentiate states from the internal municipality boarders.
 
 ![Sprint 3 Review](img/Sprint3_review_zoom.png "Sprint 3 Review") 
+
+### Future Plans for the Product
+In addition to her feedback points for the latest increment, Marcia will discuss internally with the relevant points of contacts as to what features will be required in the future versions of Malaria Monitor to make it a Global web app suitable for other countries in addition to Brazil. 
+
+We envisage the following roadmap for Malaria Monitor in future sprints:
+
+1: Add functionality for user registration and secured log in 
+2: Add other vector borne diseases mapping for Brazil
+3: Add disease mappings for more countries in Latin America
+4: Add mappings for more countries in Africa, Asia and other affected regions.
+5: Add more data analytics and visual informatics
+
