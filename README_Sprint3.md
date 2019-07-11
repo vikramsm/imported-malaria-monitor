@@ -7,7 +7,7 @@ Our velocity forecast is of 7 Story Points for Sprint 3. It was 8 in Sprint 1 an
 Stories were pulled to sprint backlog and pulled from the top of our product backlog. None of the stories was more than half of the velocity in this sprint; therefore, no refinement was needed.  
 The tasks were decomposed into tasks.
 
-Sprint 2 Backlog and Tasks can be found here: https://trello.com/b/2R8EOqim/imported-malaria-monitor
+Sprint 3 Backlog and Tasks can be found here: https://trello.com/b/2R8EOqim/imported-malaria-monitor
 
 ### What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal? Annotate your team's response so it's clear which team members did which activities.
 
