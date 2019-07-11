@@ -38,9 +38,9 @@ The second impediment we faced was due to the supported database software in her
 
 ????????????
 
-### Sprint 3 TDD
-
-????????????
+### Sprint 3 BDD/TDD
+The BDD and TDD tests are in api/test.py file
+![Sprint 3 BDD](img/bdd_tdd.png "Sprint 3 BDD")
 
 #### Front-End UI Test Driven Design
 
