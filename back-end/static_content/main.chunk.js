@@ -321,10 +321,24 @@ let MapComponent = class MapComponent {
                     (50 <= d && d < 75) ? '#fc8d59' :
                         '#d7301f'; //d ===4
         };
+        this.selectChange = (event) => {
+            this.selectedCase = event;
+            console.log(`Getting data for case type ${this.selectedCase}`);
+            this.getDataAndStartMap(this.selectedCase);
+        };
+        this.getDensity = (props) => {
+            let key = this.makeFeatureNameKey(props);
+            let count = this.malariaCountMap[key];
+            console.log(`got density '${count}' for '${key}'`);
+            return count;
+        };
+        this.makeFeatureNameKey = (props) => {
+            return `${props.NAME_2}, ${props.NAME_1}, ${this.brasilNormalizedName}`.toUpperCase();
+        };
         this.style = (feature) => {
             let density = this.getDensity(feature.properties);
             let color = this.getColor(density);
-            console.log(`Fill color is ${color} for density ${density}`);
+            let key = this.makeFeatureNameKey(feature.properties);
             return {
                 fillColor: color,
                 weight: 2,
@@ -337,12 +351,11 @@ let MapComponent = class MapComponent {
         };
         this.makeMalariaCountLookup = (malJson) => {
             const mapString = JSON.stringify(malJson);
-            console.log("MAL: " + mapString);
             this.malariaCountMap = {};
             malJson.forEach(item => {
                 let key = `${item.Municipality}, ${item.State}, ${this.brasilNormalizedName}`.toUpperCase();
                 this.number_cases += item.count;
-                console.log(`${key} has ${item.count}, total ${this.number_cases}`);
+                console.log(`Malaria: "${key}" has "${item.count}" cases, total cases count "${this.number_cases}"`);
                 this.malariaCountMap[`${item.Municipality}, ${item.State}, ${this.brasilNormalizedName}`.toUpperCase()] = `${item.count}`;
             });
         };
@@ -374,9 +387,8 @@ let MapComponent = class MapComponent {
                     let p = feature.properties;
                     let name = p.NAME_3;
                     let fullName = `${p.NAME_2}, ${p.NAME_1}, ${self.brasilNormalizedName}`;
-                    let density = self.getDensity(fullName.toUpperCase());
-                    console.log(`feature props key ${fullName}  density ${density}`);
-                    layer.bindPopup(`<h1>${name}</h1><div class="popup">${fullName}</div><div <div class="popup">Count ${density}</div>`);
+                    let tempD = self.getDensity(p);
+                    layer.bindPopup(`<h1>${name}</h1><div class="popup">${fullName}</div><div <div class="popup">Count ${tempD}</div>`);
                 }
             }).addTo(this.map);
             // this only works on the heroku DNS, so ignore it if hot on heroku
@@ -397,17 +409,6 @@ let MapComponent = class MapComponent {
     ngOnInit() {
         this.location = window.location.hostname;
         this.getDataAndStartMap(this.malariaDefaultCaseType);
-    }
-    selectChange(event) {
-        this.selectedCase = event;
-        console.log(`Getting data for case type ${this.selectedCase}`);
-        this.getDataAndStartMap(this.selectedCase);
-    }
-    getDensity(props) {
-        let key = `${props.NAME_2}, ${props.NAME_1}, ${this.brasilNormalizedName}`.toUpperCase();
-        let count = this.malariaCountMap[key] | 0;
-        console.log(`returning  density ${count} for ${key}`);
-        return count;
     }
 };
 MapComponent.ctorParameters = () => [
