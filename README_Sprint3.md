@@ -64,11 +64,9 @@ We setup Heroku automatically deploy our app whenever new commits are pushed to 
 
 ### Sprint 3 Evidence of Running Program
 
-UPDATE BELOW WITH NEW SCREENSHOTS PLZ
-
 The front-end angular.io component demonstrating the counties of Brazil with 0 cases of Malaria.
 
-![Sprint 2 Running Code](img/Sprint3_IMMmap.png "Sprint 2 running front-end")
+![Sprint 3 Running Code](img/Sprint3_IMMmap.png "Sprint 3 running front-end")
 
 ### Sprint 3 Daily Scrums 
 We performed daily scrums to inform each other where we were in progress towards the sprint goal, and to refocus efforts, and to resolve impediments as a team. We met in person after class on Monday, Tuesday, and Wednesday.
