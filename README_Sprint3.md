@@ -52,15 +52,11 @@ The second impediment we faced was due to the supported database software in her
 
 ### Sprint 3 CI - Travis
 
-UPDATE BELOW WITH NEW SCREENSHOTS PLZ
-
 We setup Travis CI to automatically test our code as commits are pushed to github.
 ![Sprint 2 CI Github](img/github_tests_sprint3.png "Sprint 2 CI Github")
 ![Sprint 2 CI](img/travis_tests_sprint3.png "Sprint 2 CI")
 
 ### Sprint 3 CD - Heroku
-
-UPDATE BELOW WITH NEW SCREENSHOTS PLZ
 
 We setup Heroku automatically deploy our app whenever new commits are pushed to the master branch and all tests pass the CI (Travis)
 ![Sprint 2 CD Setup](img/heroku_setup.png "Sprint 2 Heroku Setup")
