@@ -55,8 +55,8 @@ The second impediment we faced was due to the supported database software in her
 UPDATE BELOW WITH NEW SCREENSHOTS PLZ
 
 We setup Travis CI to automatically test our code as commits are pushed to github.
-![Sprint 2 CI Github](img/github_tests.png "Sprint 2 CI Github")
-![Sprint 2 CI](img/travis_tests.png "Sprint 2 CI")
+![Sprint 2 CI Github](img/github_tests_sprint3.png "Sprint 2 CI Github")
+![Sprint 2 CI](img/travis_tests_sprint3.png "Sprint 2 CI")
 
 ### Sprint 3 CD - Heroku
 
