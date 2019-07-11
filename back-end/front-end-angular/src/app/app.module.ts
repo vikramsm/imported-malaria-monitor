@@ -11,7 +11,6 @@ import { FormsModule } from "@angular/forms";
 import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 @NgModule({
   imports: [
     HttpModule,
@@ -26,6 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     MatTabsModule,
+    HttpClientModule, 
+    MatTabsModule, 
     BrowserAnimationsModule
   ],
   declarations: [
