@@ -24,8 +24,11 @@ Sprint 3 Backlog and Tasks can be found here: https://trello.com/b/2R8EOqim/impo
 - Vikram: 
 
 ### Impediments we had and how we removed them
+There were two impediments we faced this sprint and we addressed them as follows: 
 
-????????????
+The first impediment was related to getting acces to the cases of malaria in Brasil. Initially we gave ourselves one day to be able to retrieve this data, if after that time we couldn't solve it ourselves we would delegate the task to the stakeholder. On the second day of the sprint, we still hadn't been able to get access to the database because of personally identifiable information (PII) of patients, so the stakeholder got involved and she was able to provide us the database given we didn't make it publicly available.
+
+The second impediment we faced was due to the supported database software in heroku. Django inherently supports sqlite, but heroku works natively with postgres. We gave ourselves one day to solve this issue by diving into the documentation of django and heroku to setup the system. Since we weren't able to solve the issue in time, our fallback measure was to change the django database to postgres since postgres is supported by heroku natively.
 
 ### Sprint 3 Burndown Chart
 
