@@ -380,7 +380,7 @@ let MapComponent = class MapComponent {
                 }
             }).addTo(this.map);
             // this only works on the heroku DNS, so ignore it if hot on heroku
-            if (this.location.url && this.location.url.includes(this.mapboxRegisteredDns)) {
+            if (this.location && this.location.includes(this.mapboxRegisteredDns)) {
                 console.log("getting tiles");
                 leaflet__WEBPACK_IMPORTED_MODULE_1__["tileLayer"]('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
                     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',

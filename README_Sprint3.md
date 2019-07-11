@@ -13,15 +13,15 @@ Sprint 3 Backlog and Tasks can be found here: https://trello.com/b/2R8EOqim/impo
 
 - Derek: Implemented basic API functionality using TDD
 - Fatma: worked on adding year to the month
-- Karen: 
-- Vikram:	
+- Karen: Merge malaria data with geoJson data for the map display
+- Vikram: Build navigation options for the front end	
 
 ### What will you do in the next 24 hours to help the Development Team meet the Sprint Goal? Annotate your team's response so it's clear which team members plan to do which activities.
 
 - Derek: Implement getMap request for all counties and case types using BDD
 - Fatma: Write Documentation (readme and trello)
-- Karen: 
-- Vikram: 
+- Karen: The front UI query to retrieve back end by case type
+- Vikram: Ensure quality on both font and back end 
 
 ### Impediments we had and how we removed them
 There were two impediments we faced this sprint and we addressed them as follows: 
@@ -36,15 +36,15 @@ The second impediment we faced was due to the supported database software in her
 
 ### Sprint 3 Mob Programming & Pair Programming
 
-????????????
+![Sprint 3 pair programming](img/sprint3_pairProg.jpeg "Sprint 3 pair prog")
 
 ### Sprint 3 BDD/TDD
 The BDD and TDD tests are in api/test.py file
 ![Sprint 3 BDD](img/bdd_tdd.png "Sprint 3 BDD")
 
 #### Front-End UI Test Driven Design
-
-????????????
+On front end front-end-angular directory run "ng test" 
+![Sprint 3 TDD](img/sprint3_UIunittest.png "Sprint 3 UI TDD")
 
 #### Back-End Server Tests
 On backend top-level directory run "python3 manage.py test" to run all backend tests.
@@ -75,10 +75,10 @@ We performed daily scrums to inform each other where we were in progress towards
 
 The following is an example from our Wednesday scrum.
 
-- Derek: Implemented getMap request for all counties and case types using BDD
-- Fatma: Got rid of Day drop down and switched month and year
-- Karen: 
-- Vikram:	
+- Derek: Done: Implemented getMap request for all counties and case types using BDD. Doing: Assisting front end integration. Impediments: none
+- Fatma: Done: Got rid of Day drop down and switched month and year. Doing: Assisting on UI navigation. Impediments: Angular.io learning curve
+- Karen: Done: code to merged malaria stats with geoJson layer, Doing: UI select queries to back end. Impediments: learning Angular.io http mocking layer for TDD.
+- Vikram:	Done: 
 
 Zoom MeetingScreenshot:
 
