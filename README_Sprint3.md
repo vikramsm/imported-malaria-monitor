@@ -64,7 +64,7 @@ We setup Heroku automatically deploy our app whenever new commits are pushed to 
 
 ### Sprint 3 Evidence of Running Program
 
-The front-end angular.io component demonstrating the counties of Brazil with 0 cases of Malaria.
+The front-end angular.io component demonstrating the counties of Brazil with cases of Malaria.
 
 ![Sprint 3 Running Code](img/Sprint3_IMMmap.png "Sprint 3 running front-end")
 
