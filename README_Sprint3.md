@@ -1,7 +1,7 @@
 ## SPRINT 3 (Due July 11th, 3 pm)
 
 ### Forecast Velocity
-Our velocity forecast is of 7 Story Points for Sprint 3. It was 8 in Sprint 1 and 2. Our forecast is based on Yesterday's weather. Sprint 3 falled in week day and if another story was added, it would be far more than team could complete. 
+Our velocity forecast is of 8 Story Points for Sprint 3. Our forecast is based on Yesterday's weather since our velocity for Sprint 2 was also 8 story points.
 
 ### Sprint Backlog
 Stories were pulled to sprint backlog and pulled from the top of our product backlog. None of the stories was more than half of the velocity in this sprint; therefore, no refinement was needed.  
