@@ -1,0 +1,374 @@
+[
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "ALVARÃES",
+    "count": 43
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "AMATURÁ",
+    "count": 71
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "ANAMÃ",
+    "count": 8
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "ANORI",
+    "count": 74
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "APUÍ",
+    "count": 39
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "ATALAIA DO NORTE",
+    "count": 5
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "AUTAZES",
+    "count": 72
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "BARCELOS",
+    "count": 52
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "BARREIRINHA",
+    "count": 36
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "BENJAMIN CONSTANT",
+    "count": 20
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "BERURI",
+    "count": 5
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "BOA VISTA DO RAMOS",
+    "count": 90
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "BOCA DO ACRE",
+    "count": 75
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "BORBA",
+    "count": 60
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "CAAPIRANGA",
+    "count": 46
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "CANUTAMA",
+    "count": 32
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "CARAUARI",
+    "count": 18
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "CAREIRO",
+    "count": 61
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "CAREIRO DA VÁRZEA",
+    "count": 4
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "COARI",
+    "count": 98
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "CODAJÁS",
+    "count": 41
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "EIRUNEPÉ",
+    "count": 35
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "ENVIRA",
+    "count": 80
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "FONTE BOA",
+    "count": 74
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "GUAJARÁ",
+    "count": 17
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "HUMAITÁ",
+    "count": 12
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "IPIXUNA",
+    "count": 57
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "IRANDUBA",
+    "count": 51
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "ITACOATIARA",
+    "count": 97
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "ITAMARATI",
+    "count": 92
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "ITAPIRANGA",
+    "count": 36
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "JAPURÁ",
+    "count": 32
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "JURUÁ",
+    "count": 78
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "JUTAÍ",
+    "count": 73
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "LÁBREA",
+    "count": 18
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "MANACAPURU",
+    "count": 14
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "MANAQUIRI",
+    "count": 61
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "MANAUS",
+    "count": 57
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "MANICORÉ",
+    "count": 3
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "MARAÃ",
+    "count": 0
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "MAUÉS",
+    "count": 46
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "NHAMUNDÁ",
+    "count": 43
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "NOVA OLINDA DO NORTE",
+    "count": 90
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "NOVO AIRAO",
+    "count": 87
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "NOVO ARIPUANA",
+    "count": 34
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "PARINTINS",
+    "count": 31
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "PAUINI",
+    "count": 79
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "PRESIDENTE FIGUEIREDO",
+    "count": 77
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "RIO PRETO DA EVA",
+    "count": 24
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "SANTA ISABEL DO RIO NEGRO",
+    "count": 22
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "SANTO ANTÔNIO DO IÇÁ",
+    "count": 71
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "SÃO GABRIEL DA CACHOEIRA",
+    "count": 69
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "SÃO PAULO DE OLIVENCA",
+    "count": 17
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "SÃO SEBASTIÃO DO UATUMA",
+    "count": 91
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "SILVES",
+    "count": 14
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "TABATINGA",
+    "count": 14
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "TAPAUÁ",
+    "count": 89
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "TEFÉ",
+    "count": 38
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "TONANTINS",
+    "count": 63
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "UARINI",
+    "count": 63
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "URUCARÁ",
+    "count": 37
+  },
+  {
+    "Country": "Brazil",
+    "State": "Acre",
+    "Municipality": "URUCURITUBA",
+    "count": 8
+  }
+]

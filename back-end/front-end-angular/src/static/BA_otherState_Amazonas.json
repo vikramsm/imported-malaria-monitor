@@ -1,0 +1,374 @@
+[
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "ALVARÃES",
+    "count": 57
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "AMATURÁ",
+    "count": 48
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "ANAMÃ",
+    "count": 90
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "ANORI",
+    "count": 81
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "APUÍ",
+    "count": 22
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "ATALAIA DO NORTE",
+    "count": 13
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "AUTAZES",
+    "count": 55
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "BARCELOS",
+    "count": 47
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "BARREIRINHA",
+    "count": 89
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "BENJAMIN CONSTANT",
+    "count": 81
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "BERURI",
+    "count": 23
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "BOA VISTA DO RAMOS",
+    "count": 15
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "BOCA DO ACRE",
+    "count": 58
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "BORBA",
+    "count": 51
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "CAAPIRANGA",
+    "count": 94
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "CANUTAMA",
+    "count": 87
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "CARAUARI",
+    "count": 29
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "CAREIRO",
+    "count": 23
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "CAREIRO DA VÁRZEA",
+    "count": 15
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "COARI",
+    "count": 12
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "CODAJÁS",
+    "count": 85
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "EIRUNEPÉ",
+    "count": 31
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "ENVIRA",
+    "count": 53
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "FONTE BOA",
+    "count": 50
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "GUAJARÁ",
+    "count": 22
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "HUMAITÁ",
+    "count": 70
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "IPIXUNA",
+    "count": 92
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "IRANDUBA",
+    "count": 90
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "ITACOATIARA",
+    "count": 62
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "ITAMARATI",
+    "count": 9
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "ITAPIRANGA",
+    "count": 32
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "JAPURÁ",
+    "count": 29
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "JURUÁ",
+    "count": 2
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "JUTAÍ",
+    "count": 50
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "LÁBREA",
+    "count": 73
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "MANACAPURU",
+    "count": 71
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "MANAQUIRI",
+    "count": 44
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "MANAUS",
+    "count": 92
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "MANICORÉ",
+    "count": 15
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "MARAÃ",
+    "count": 13
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "MAUÉS",
+    "count": 87
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "NHAMUNDÁ",
+    "count": 35
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "NOVA OLINDA DO NORTE",
+    "count": 59
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "NOVO AIRAO",
+    "count": 57
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "NOVO ARIPUANA",
+    "count": 30
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "PARINTINS",
+    "count": 80
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "PAUINI",
+    "count": 3
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "PRESIDENTE FIGUEIREDO",
+    "count": 1
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "RIO PRETO DA EVA",
+    "count": 76
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "SANTA ISABEL DO RIO NEGRO",
+    "count": 24
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "SANTO ANTÔNIO DO IÇÁ",
+    "count": 49
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "SÃO GABRIEL DA CACHOEIRA",
+    "count": 48
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "SÃO PAULO DE OLIVENCA",
+    "count": 22
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "SÃO SEBASTIÃO DO UATUMA",
+    "count": 72
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "SILVES",
+    "count": 96
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "TABATINGA",
+    "count": 96
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "TAPAUÁ",
+    "count": 70
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "TEFÉ",
+    "count": 19
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "TONANTINS",
+    "count": 44
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "UARINI",
+    "count": 43
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "URUCARÁ",
+    "count": 18
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "URUCURITUBA",
+    "count": 68
+  }
+]

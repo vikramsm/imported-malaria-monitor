@@ -1,33 +1,31 @@
-<h2>Brazil By County</h2>
+<h2>Brazil By Municipality</h2>
 <div class="info-section">
 <div class="h3 info-item" id="cases-total-found">Total Cases Shown: {{number_cases}}</div>
-  
-  
- 
 
-  <div class="year-filter-option" class="info-item">
+  <div class="case-filter-option" class="info-item">
+  <label for="case-filter">Imported Cases: </label>
+   <select id="case-filter" name="case-filter" (ngModelChange)="selectChange($event)" [(ngModel)]="selectedCase" >
+      <option *ngFor="let type of caseTypes"
+              [value]="type.key" [innerHtml]="type.value"></option>
+    </select>
+  </div>
+
+  <div class="info-item">
+  <div class="year-filter-option" >
   <label for="year-filter">Year: </label>
    <select id="year-filter" type="year" name="year-filter">
      <option *ngFor = "let i of years">{{i}}</option>
    </select>
   </div>
 
-  <div class="month-filter-option" class="info-item">
+  <div class="month-filter-option" >
   <label for="month-filter">Month: </label>
    <select id="month-filter" type="month" name="month-filter">
      <option *ngFor = "let i of months">{{i}}</option>
    </select>
   </div>
-
-  
-  <div class="case-filter-option" class="info-item">
-  <label for="case-filter">Imported Cases: </label>
-   <select id="case-filter" name="case-filter">
-     <option *ngFor = "let i of cases">{{i}}</option>
-   </select>
   </div>
 </div>
 <div id="map"></div>
 
 <div>{{trimmedJson}}</div>
-

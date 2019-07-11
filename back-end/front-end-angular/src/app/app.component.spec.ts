@@ -1,6 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MapComponent } from './map/map.component';
+import { FormsModule } from "@angular/forms";
 
 describe('AppComponent', () => {
 
@@ -36,3 +38,10 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1').textContent).toContain(title);
   });
 });
+/*
+onMapReady(map: Map): void {
+    setTimeout(() => {
+      map.invalidateSize();
+    });
+}
+*/

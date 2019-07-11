@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MapComponent } from './map.component';
-//import { HttpClient } from '@angular/common/http';
 import { BackendService } from '../backend/backend.service';
 import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
+import { FormsModule } from "@angular/forms";
 
 describe('MapComponent', () => {
 
@@ -13,10 +13,11 @@ describe('MapComponent', () => {
 
   beforeEach(async(() => {
     mockBackendService = jasmine.createSpyObj('service',
-         ['getGeoJson','getBackupGeoJson']
+         ['getGeoJson','getMalariaJson']
     );
     TestBed.configureTestingModule({
-      declarations: [ MapComponent ]
+      declarations: [ MapComponent ],
+      imports: [ FormsModule ]
     });
     TestBed.overrideProvider(BackendService, {
       useValue: mockBackendService
@@ -25,7 +26,7 @@ describe('MapComponent', () => {
       fixture = TestBed.createComponent(MapComponent);
       component = fixture.componentInstance;
       mockBackendService.getGeoJson.and.returnValue(of(mockGeoJsonData)); // added this line
-      mockBackendService.getBackupGeoJson.and.returnValue(of(mockGeoJsonData)); // added this line
+      mockBackendService.getMalariaJson.and.returnValue(of(mockMalariaData)); // added this line
       fixture.detectChanges();
     })
   }));
@@ -41,19 +42,19 @@ describe('MapComponent', () => {
   });
 
   it('should have a map object with a zoom level', async (done) => {
-    expect(component.getMap().getZoom()).toEqual(6);
+    expect(component.getMap().getZoom()).toEqual(5);
     done();
   });
 
   it('should have a minimum zoom level', async (done) => {
-    expect(component.getMap().getMinZoom()).toEqual(5);
+    expect(component.getMap().getMinZoom()).toEqual(4);
     done();
   });
 
   it('should have a title', () => {
     const de = fixture.debugElement.query(By.css('h2'));
     const el = de.nativeElement;
-    expect(el.textContent).toContain("Brazil By County");
+    expect(el.textContent).toContain("Brazil By Municipality");
   });
 
   it('should have an information section', () => {
@@ -76,11 +77,6 @@ describe('MapComponent', () => {
     expect(de.nativeElement).toBeTruthy();
   });
 
-  it('should have a legend UI element', () => {
-    const de = fixture.debugElement.query(By.css('#legend'));
-    expect(de.nativeElement).toBeTruthy();
-  });
-
   it('should have a map UI element', () => {
     const de = fixture.debugElement.query(By.css('#map'));
     expect(de.nativeElement).toBeTruthy();
@@ -93,31 +89,25 @@ describe('MapComponent', () => {
 
 });
 
-const mockMalariaData = {
-  "cases": [{
-    "LOC_NOTIF_0": "Brazil",
-    "LOC_NOTIF_1": "Acre",
-    "LOC_NOTIF_2": "Acrelândia",
-    "LOC_NOTIF_3": "Acrelândia",
-    "LOC_INFE_0": "Brazil",
-    "LOC_INFE_1": "Acre",
-    "LOC_INFE_2": "Acrelândia",
-    "LOC_INFE_3": "Acrelândia",
-    "DT_EXAME": "15/11/18",
-    "DT_NOTIF": "15/11/18",
-  },{
-    "LOC_NOTIF_0": "Brazil",
-    "LOC_NOTIF_1": "Acre",
-    "LOC_NOTIF_2": "Acrelândia",
-    "LOC_NOTIF_3": "Acrelândia",
-    "LOC_INFE_0": "Brazil",
-    "LOC_INFE_1": "Amazonas",
-    "LOC_INFE_2": "Apuí",
-    "LOC_INFE_3": "Apuí",
-    "DT_EXAME": "15/14/18",
-    "DT_NOTIF": "15/14/18",
-  }]
-};
+const mockMalariaData = [
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "ALVARÃES",
+    "count": 43
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "AMATURÁ",
+    "count": 71
+  },
+  {
+    "Country": "BRASIL",
+    "State": "AMAZONAS",
+    "Municipality": "ANAMÃ",
+    "count": 8
+  }];
 
 const mockGeoJsonData = [
   {
